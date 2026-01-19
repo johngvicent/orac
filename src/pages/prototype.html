@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37", // Orac Gold
+                        "background-light": "#f1f1f4",
+                        "background-dark": "#0f0f16", // Deep Void
+                        "velvet": "#1a1a2e",
+                        "gold-leaf": "#b8860b",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.velvet-texture {
+    background: radial-gradient(circle at top center, #2e293f 0%, #151320 100%);
+    position: relative
+    }
+.velvet-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBeZGahqGcc7A_MS7YNexZObhps7NfblcaGcvnDnayQ1sZm8IELTYELNQw_bSNmgYewcmA8mtGoTLCcosSLJMjYX0HEP7Q7mf1peYm83JEnOs1MPKm0QSk9jPUO93220Nlb9w8NZ7zOqSOfocLkGr4duRkR3rm92fgfIBHqb4M4rgGNtDs95leqQqTDa6G0Gsx4xHl8rXsDXNH37WCzF88cLp0ByHUuOCycKF28zxqVVynxE5JNnpM3wBMDPKjqMcDaTHDxGLRSIJk);
+    opacity: 0.1;
+    pointer-events: none
+    }
+.gold-border {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.05)
+    }
+.sacred-glow {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4))
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-white/90">
+<div class="relative flex h-auto min-h-screen w-full flex-col velvet-texture overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">chevron_left</span>
+</div>
+<h2 class="text-primary font-display text-lg font-bold leading-tight tracking-widest uppercase flex-1 text-center">Initiate Profile</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+</div>
+</div>
+<!-- ProfileHeader with Celestial Ring -->
+<div class="flex p-6 mt-4">
+<div class="flex w-full flex-col gap-6 items-center">
+<div class="relative flex flex-col items-center">
+<!-- Ouroboros / Celestial Ring -->
+<div class="absolute -inset-4 border-2 border-primary/40 rounded-full animate-pulse opacity-50"></div>
+<div class="absolute -inset-2 border border-primary/60 rounded-full"></div>
+<div class="relative bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-2 border-primary shadow-[0_0_25px_rgba(212,175,55,0.3)]" data-alt="User profile portrait in celestial frame" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeWyUKLuimLS5lPqIfUCQ18YEN8_RBIrQibef68XMPPcIPo02opwynGKCdilvCD9lU_oY-O23_bwuDHOGXdmNo1GqVZ8tvGRGy5BCKNpqHtWVqGU2w2GTZe6tcgHFqTmfoLWLDkqiNNSA6_ZMKUikPqg6HjY5OZ_Q9Sf4WcL9_YInC-MnFvw7WsqMgdvErO21wy8mTZ1vND02Gtxy40KTUbLtICBEiUbOc6hLolxCL4DGLAFKaVhoLUGbifEUS_t9K-_V1DKZHYgU");'>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-2 bg-background-dark px-3 py-0.5 border border-primary rounded-full">
+<span class="text-[10px] text-primary font-bold tracking-[0.2em] uppercase">Level 12</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center space-y-1">
+<p class="text-white font-display text-3xl font-bold tracking-tight text-center">Adept Practitioner</p>
+<p class="text-primary/70 text-sm font-medium leading-normal tracking-widest uppercase">Cosmic Connection</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-primary text-xs">auto_awesome</span>
+<p class="text-[#a09ac1] text-xs font-normal italic">Seeker since Winter Solstice 2023</p>
+<span class="material-symbols-outlined text-primary text-xs">auto_awesome</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="px-4 py-2 mt-4">
+<h4 class="text-primary/50 text-[10px] font-bold leading-normal tracking-[0.3em] uppercase text-center border-b border-primary/10 pb-2">Mystical Metrics</h4>
+</div>
+<!-- Stats Grid (Bento Style) -->
+<div class="grid grid-cols-2 gap-3 p-4">
+<div class="col-span-1 flex flex-col gap-2 rounded-xl p-5 gold-border bg-white/5 backdrop-blur-sm">
+<div class="flex items-center justify-between">
+<p class="text-primary/80 text-[10px] font-bold uppercase tracking-wider">Total Draws</p>
+<span class="material-symbols-outlined text-primary/40 text-sm">style</span>
+</div>
+<p class="text-white font-display text-3xl font-bold leading-tight">152</p>
+</div>
+<div class="col-span-1 flex flex-col gap-2 rounded-xl p-5 gold-border bg-white/5 backdrop-blur-sm">
+<div class="flex items-center justify-between">
+<p class="text-primary/80 text-[10px] font-bold uppercase tracking-wider">Streak</p>
+<span class="material-symbols-outlined text-primary/40 text-sm">event_repeat</span>
+</div>
+<p class="text-white font-display text-3xl font-bold leading-tight">14 <span class="text-xs font-sans text-primary/60 uppercase">Days</span></p>
+</div>
+<div class="col-span-2 flex items-center justify-between gap-4 rounded-xl p-5 gold-border bg-primary/5 border-primary/40">
+<div class="flex flex-col gap-1">
+<p class="text-primary/80 text-[10px] font-bold uppercase tracking-wider">Most Frequent Arcana</p>
+<p class="text-white font-display text-xl font-bold leading-tight">The High Priestess</p>
+</div>
+<div class="h-14 w-10 rounded bg-background-dark border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl">temple_hindu</span>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="px-4 py-2 mt-6">
+<h4 class="text-primary/50 text-[10px] font-bold leading-normal tracking-[0.3em] uppercase text-center border-b border-primary/10 pb-2">Zodiac Alignment</h4>
+</div>
+<!-- Charts / Sacred Geometry -->
+<div class="px-4 py-6">
+<div class="flex flex-col gap-6 rounded-2xl bg-white/5 gold-border p-6 relative overflow-hidden">
+<!-- Abstract Background Geometry -->
+<div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px] text-primary">join_inner</span>
+</div>
+<div class="flex flex-col gap-1 z-10">
+<p class="text-primary/70 text-xs font-bold uppercase tracking-[0.2em]">Current Resonance</p>
+<p class="text-white font-display text-4xl font-bold tracking-tight">98% Alignment</p>
+</div>
+<!-- Sacred Geometry Chart -->
+<div class="relative flex flex-col gap-8 py-4 z-10">
+<svg class="sacred-glow" fill="none" height="160" preserveaspectratio="none" viewbox="0 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Connecting Lines -->
+<path d="M0 100 L40 30 L80 120 L120 40 L160 90 L200 20 L240 130 L280 50 L320 110 L360 10 L400 140 L440 60 L478 100" opacity="0.4" stroke="#D4AF37" stroke-dasharray="4 2" stroke-width="1.5"></path>
+<!-- Main Resonance Path -->
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#D4AF37" stroke-linecap="round" stroke-width="3"></path>
+<!-- Fill Gradient -->
+<defs>
+<lineargradient id="goldGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#D4AF37" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#D4AF37" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25 V150 H0 V109Z" fill="url(#goldGradient)"></path>
+</svg>
+<div class="flex justify-between px-1">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">asterisk</span>
+<p class="text-primary/60 text-[8px] font-bold uppercase tracking-tighter">Ari</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">allo</span>
+<p class="text-primary/60 text-[8px] font-bold uppercase tracking-tighter">Leo</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">stars</span>
+<p class="text-primary/60 text-[8px] font-bold uppercase tracking-tighter">Sag</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">duo</span>
+<p class="text-primary/60 text-[8px] font-bold uppercase tracking-tighter">Gem</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">bia</span>
+<p class="text-primary/60 text-[8px] font-bold uppercase tracking-tighter">Lib</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">aq</span>
+<p class="text-primary/60 text-[8px] font-bold uppercase tracking-tighter">Aqu</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="flex flex-col gap-3 px-4 mt-4">
+<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-xl shadow-[0_4px_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">diamond</span>
+<span class="uppercase tracking-widest text-sm">Download Soul Map</span>
+</button>
+</div>
+<!-- Mobile Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-background-dark/95 backdrop-blur-xl border-t border-primary/20 px-4 py-3 z-[100]">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<div class="flex flex-col items-center gap-1 text-primary/40 cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[9px] uppercase font-bold tracking-tighter">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary/40 cursor-pointer">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[9px] uppercase font-bold tracking-tighter">Spreads</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary/40 cursor-pointer">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[9px] uppercase font-bold tracking-tighter">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary/40 cursor-pointer">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[9px] uppercase font-bold tracking-tighter">Journal</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary cursor-pointer">
+<span class="material-symbols-outlined fill-1">account_circle</span>
+<span class="text-[9px] uppercase font-bold tracking-tighter">Profile</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>
