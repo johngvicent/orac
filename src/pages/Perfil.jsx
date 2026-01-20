@@ -17,7 +17,7 @@ function Perfil() {
     {
       icon: 'auto_stories',
       title: 'Baraja Favorita',
-      value: 'CELESTIAL ETHER'
+      value: 'EL Mago'
     },
     {
       icon: 'visibility',
@@ -55,8 +55,8 @@ function Perfil() {
 
         {/* Tarjeta zodiacal */}
         <ZodiacCard 
-          sign="Scorpio"
-          house="Sun In The 8th House"
+          sign="Escoprpio"
+          house="Sol en la 8ª Casa"
           icon="nights_stay"
         />
       </main>

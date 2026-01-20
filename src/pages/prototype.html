@@ -2,11 +2,12 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Orac - Initiate Profile</title>
+<title>Orac - Your Journey</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script>
       tailwind.config = {
         darkMode: "class",
@@ -31,40 +32,39 @@
       };
     </script>
 <style type="text/tailwindcss">
-    .sacred-geometry-overlay {
-        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAxF1VOzdd3ocoR2utmJxuD08h3jIz0IwiQpEDNUqHpJ1TX1KQ09hWtLmPH2jSNWQ9DaTFSNks9Eh-cKqicDhLXkhzdee0LxTBcAKLI6CgC7edLab0Yhk6Tdj7J0je2uRvlyUNyFBb9CpNGXyjpU95-GOmFCqvYhZM5L5ib0McpY884DwqUcKqoaJezDDl4J9KbcZAuRzn1I_UzjzEfar7sqsqCL_R7T3NL-if0jiOKPIbncSlq0Q_u8Hztsmmqikg-CUwCaXYdD6Q);
-        opacity: 0.15;
-    }
-    .gold-leaf-gradient {
-        background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .gold-icon {
-        background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .mystic-glow-profile {
-        box-shadow: 0 0 40px 5px rgba(212, 175, 55, 0.2);
-    }
-    .cosmic-gradient {
-        background: radial-gradient(circle at center, #1B2430 0%, #05070A 100%);
-    }
-    .geometry-line {
-        stroke: rgba(212, 175, 55, 0.15);
-        stroke-width: 0.5;
-        fill: none;
-    }
-    .stat-card {
-        background: rgba(27, 36, 48, 0.4);
-        border: 1px solid rgba(212, 175, 55, 0.1);
-        backdrop-filter: blur(8px);
-    }
-    </style>
-<style>
+        .sacred-geometry-overlay {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAxF1VOzdd3ocoR2utmJxuD08h3jIz0IwiQpEDNUqHpJ1TX1KQ09hWtLmPH2jSNWQ9DaTFSNks9Eh-cKqicDhLXkhzdee0LxTBcAKLI6CgC7edLab0Yhk6Tdj7J0je2uRvlyUNyFBb9CpNGXyjpU95-GOmFCqvYhZM5L5ib0McpY884DwqUcKqoaJezDDl4J9KbcZAuRzn1I_UzjzEfar7sqsqCL_R7T3NL-if0jiOKPIbncSlq0Q_u8Hztsmmqikg-CUwCaXYdD6Q);
+            opacity: 0.15;
+        }
+        .cosmic-gradient {
+            background: radial-gradient(circle at center, #1B2430 0%, #05070A 100%);
+        }
+        .geometry-line {
+            stroke: rgba(212, 175, 55, 0.2);
+            stroke-width: 0.5;
+            fill: none;
+        }
+        .history-card {
+            background: rgba(10, 14, 20, 0.6);
+            backdrop-filter: blur(8px);
+            border: 0.5px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+        .history-card:active {
+            border-color: rgba(212, 175, 55, 0.8);
+            background: rgba(27, 36, 48, 0.7);
+        }
         body {
-            min-height: max(844px, 100dvh);
+            min-height: max(884px, 100dvh);
+        }
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.2);
         }
     </style>
 <style>
@@ -76,76 +76,112 @@
 <body class="bg-background-dark font-serif text-slate-200 overflow-hidden h-screen flex flex-col">
 <div class="fixed inset-0 z-0 cosmic-gradient">
 <div class="absolute inset-0 sacred-geometry-overlay"></div>
-</div>
-<div class="fixed top-0 left-0 w-24 h-24 border-t border-l border-primary/10 rounded-tl-3xl pointer-events-none mt-10 ml-4"></div>
-<div class="fixed top-0 right-0 w-24 h-24 border-t border-r border-primary/10 rounded-tr-3xl pointer-events-none mt-10 mr-4"></div>
-<header class="relative z-10 pt-12 pb-4 px-6 flex justify-between items-center">
-<div class="w-10 h-10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-2xl">settings</span>
-</div>
-<h1 class="font-display text-xl tracking-[0.2em] text-primary">PROFILE</h1>
-<div class="w-10 h-10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-2xl">share</span>
-</div>
-</header>
-<main class="relative z-10 flex-1 overflow-y-auto px-6 pb-24">
-<div class="flex flex-col items-center mt-4 mb-8">
-<div class="relative w-32 h-32 mb-6">
-<div class="absolute inset-0 rounded-full bg-primary/10 blur-xl mystic-glow-profile"></div>
-<div class="relative w-full h-full rounded-full border border-primary/40 p-1 bg-midnight overflow-hidden">
-<img alt="User Avatar" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgWLr0k88prCVA-01C3Miy5MVW9Yq24Vaubky51pJOh_7MG-GwyN3pkFJ-7xDcoRXoXYk2K_0cGSYSas87-NqihEj4aD1l3J2QxNixPSwVuf3jPvwQo5rTvaDN2XcWFkSCzfOc6-dxczLQLTOJIrfYPEYQnuZgFS1MAWh58507SzA5XGpwoQuQwjxGEGDIKB2YaHY4HgBQLdsTzwhpgUD3pgycv33Porrmarbt35sDEGdE2dEZmV3YBRLH7puQY9CCx880zXQ_XGA"/>
-</div>
-</div>
-<h2 class="font-display text-2xl tracking-widest gold-leaf-gradient uppercase mb-1">Adept Practitioner</h2>
-<p class="text-primary/60 font-serif italic text-lg tracking-wide">Spirituality Level IX</p>
-</div>
-<div class="grid grid-cols-1 gap-4 mb-8">
-<div class="stat-card p-4 rounded-xl flex items-center justify-between">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined gold-icon text-3xl">style</span>
-<span class="font-serif text-lg text-slate-300">Daily Readings</span>
-</div>
-<span class="font-display text-primary text-xl">124</span>
-</div>
-<div class="stat-card p-4 rounded-xl flex items-center justify-between">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined gold-icon text-3xl">auto_stories</span>
-<span class="font-serif text-lg text-slate-300">Favorite Deck</span>
-</div>
-<span class="font-display text-primary text-sm tracking-tighter">CELESTIAL ETHER</span>
-</div>
-<div class="stat-card p-4 rounded-xl flex items-center justify-between">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined gold-icon text-3xl">visibility</span>
-<span class="font-serif text-lg text-slate-300">Insights Shared</span>
-</div>
-<span class="font-display text-primary text-xl">42</span>
-</div>
-</div>
-<div class="relative stat-card p-6 rounded-2xl overflow-hidden min-h-[220px]">
-<div class="relative z-10">
-<h3 class="font-display text-sm tracking-[0.2em] text-primary/80 uppercase mb-4">Zodiac Alignment</h3>
-<div class="flex items-center gap-6">
-<div class="w-20 h-20 rounded-full border border-primary/20 flex items-center justify-center bg-black/20">
-<span class="material-symbols-outlined text-4xl text-primary/60">nights_stay</span>
-</div>
-<div>
-<p class="font-display text-xl text-primary uppercase">Scorpio</p>
-<p class="font-serif italic text-slate-400">Sun In The 8th House</p>
-</div>
-</div>
-</div>
-<div class="absolute inset-0 opacity-40 pointer-events-none translate-y-4">
-<svg class="w-full h-full" viewBox="0 0 200 200">
-<circle class="geometry-line" cx="100" cy="100" r="80"></circle>
-<polygon class="geometry-line" points="100,20 180,100 100,180 20,100"></polygon>
-<path class="geometry-line" d="M20 100 L180 100 M100 20 L100 180"></path>
-<circle class="geometry-line" cx="100" cy="100" r="40"></circle>
+<svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+<circle class="geometry-line" cx="50" cy="40" r="30"></circle>
+<circle class="geometry-line" cx="50" cy="40" r="20"></circle>
+<path class="geometry-line" d="M50 5 L50 95 M5 50 L95 50"></path>
+<polygon class="geometry-line" points="50,10 90,50 50,90 10,50"></polygon>
 </svg>
 </div>
+<header class="relative z-10 pt-14 pb-6 px-6 text-center">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary text-2xl opacity-50">auto_awesome</span>
+<h1 class="font-display text-2xl tracking-[0.2em] text-primary">ORAC</h1>
+<span class="material-symbols-outlined text-primary text-2xl opacity-50">search</span>
 </div>
+<div class="mt-8">
+<h2 class="font-display text-xl tracking-[0.25em] text-primary uppercase">Your Journey</h2>
+<div class="h-px w-16 bg-primary/30 mx-auto mt-2"></div>
+</div>
+</header>
+<main class="relative z-10 flex-1 overflow-y-auto px-6 py-4 space-y-4">
+<div class="history-card rounded-lg p-4 flex gap-4">
+<div class="relative w-16 h-24 flex-shrink-0 bg-black/40 border border-primary/20 rounded-md overflow-hidden">
+<img alt="The Moon" class="w-full h-full object-cover opacity-80 mix-blend-lighten" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMi5WEDu2HygCsEkn2q2RDYTIuKN_i06dmSst99eAizoTgm-qLM8pbSGt3TW77AI1uP3UOF6xi75mUv9VTMJU_kJRY6CkIFg05uwEkJcHu8mIDDAE0mwCgVN-KJ8Hf9I7-z8yBnsFZli45B8V4j9hO1zkBOB3PObpSDZu3YW6e60mdgtUY3ewThfJ0B7q2AwuRHXsSEz252BDFBSresCRbkxBcacu7tXTNfIR9HNeLL9JAhUte9k3QgtJ-W8BfS2FuSuQqgkDPC64"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/30 text-xs">style</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-display text-primary text-sm tracking-widest uppercase">The Moon</h3>
+<span class="text-[10px] text-primary/60 font-serif italic">Oct 24, 2023</span>
+</div>
+<p class="text-slate-400 font-serif italic text-xs leading-relaxed line-clamp-3">
+                    Deep intuition and hidden fears surface. Trust your inner voice as you navigate through the uncertainty of the night...
+                </p>
+<div class="mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px] text-primary">history</span>
+<span class="text-[9px] uppercase tracking-tighter text-primary/50 font-display">Daily Draw</span>
+</div>
+</div>
+</div>
+<div class="history-card rounded-lg p-4 flex gap-4">
+<div class="relative w-16 h-24 flex-shrink-0 bg-black/40 border border-primary/20 rounded-md overflow-hidden">
+<img alt="The Star" class="w-full h-full object-cover opacity-80 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxF1VOzdd3ocoR2utmJxuD08h3jIz0IwiQpEDNUqHpJ1TX1KQ09hWtLmPH2jSNWQ9DaTFSNks9Eh-cKqicDhLXkhzdee0LxTBcAKLI6CgC7edLab0Yhk6Tdj7J0je2uRvlyUNyFBb9CpNGXyjpU95-GOmFCqvYhZM5L5ib0McpY884DwqUcKqoaJezDDl4J9KbcZAuRzn1I_UzjzEfar7sqsqCL_R7T3NL-if0jiOKPIbncSlq0Q_u8Hztsmmqikg-CUwCaXYdD6Q"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/30 text-xs">style</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-display text-primary text-sm tracking-widest uppercase">The Star</h3>
+<span class="text-[10px] text-primary/60 font-serif italic">Oct 22, 2023</span>
+</div>
+<p class="text-slate-400 font-serif italic text-xs leading-relaxed line-clamp-3">
+                    A period of healing and renewed hope. The universe aligns to provide clarity after the storm...
+                </p>
+<div class="mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px] text-primary">auto_awesome_mosaic</span>
+<span class="text-[9px] uppercase tracking-tighter text-primary/50 font-display">Celtic Cross</span>
+</div>
+</div>
+</div>
+<div class="history-card rounded-lg p-4 flex gap-4">
+<div class="relative w-16 h-24 flex-shrink-0 bg-black/40 border border-primary/20 rounded-md overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-indigo-900/50 to-black"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40 text-2xl">style</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-display text-primary text-sm tracking-widest uppercase">The Hermit</h3>
+<span class="text-[10px] text-primary/60 font-serif italic">Oct 21, 2023</span>
+</div>
+<p class="text-slate-400 font-serif italic text-xs leading-relaxed line-clamp-3">
+                    Seek your own light. A time for introspection and inner wisdom rather than external validation...
+                </p>
+<div class="mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px] text-primary">history</span>
+<span class="text-[9px] uppercase tracking-tighter text-primary/50 font-display">Daily Draw</span>
+</div>
+</div>
+</div>
+<div class="history-card rounded-lg p-4 flex gap-4">
+<div class="relative w-16 h-24 flex-shrink-0 bg-black/40 border border-primary/20 rounded-md overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-red-900/40 to-black"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40 text-2xl">style</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-display text-primary text-sm tracking-widest uppercase">Justice</h3>
+<span class="text-[10px] text-primary/60 font-serif italic">Oct 19, 2023</span>
+</div>
+<p class="text-slate-400 font-serif italic text-xs leading-relaxed line-clamp-3">
+                    Balance and truth prevail. Your actions are weighed with the consequences they deserve...
+                </p>
+<div class="mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px] text-primary">history</span>
+<span class="text-[9px] uppercase tracking-tighter text-primary/50 font-display">Daily Draw</span>
+</div>
+</div>
+</div>
+<div class="h-10"></div> 
 </main>
-<nav class="fixed bottom-0 left-0 right-0 z-50 pb-8 pt-4 px-4 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent">
+<nav class="relative z-10 pb-8 pt-4 px-4 bg-gradient-to-t from-background-dark to-transparent">
 <div class="flex justify-around items-end max-w-md mx-auto">
 <a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
 <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">auto_awesome_mosaic</span>
@@ -155,19 +191,23 @@
 <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">grid_view</span>
 <span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">Spreads</span>
 </a>
-<a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">history</span>
-<span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">History</span>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary">history</span>
+<span class="text-[10px] uppercase tracking-tighter font-display text-primary">History</span>
 </a>
 <a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
 <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">menu_book</span>
 <span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">Journal</span>
 </a>
-<a class="flex flex-col items-center gap-1 group" href="#">
-<span class="material-symbols-outlined text-primary">person</span>
-<span class="text-[10px] uppercase tracking-tighter font-display text-primary">Profile</span>
+<a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">person</span>
+<span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">Profile</span>
 </a>
 </div>
 </nav>
+<div class="fixed top-0 left-0 w-32 h-32 border-t border-l border-primary/10 rounded-tl-3xl pointer-events-none mt-10 ml-4"></div>
+<div class="fixed top-0 right-0 w-32 h-32 border-t border-r border-primary/10 rounded-tr-3xl pointer-events-none mt-10 mr-4"></div>
+<div class="fixed bottom-0 left-0 w-32 h-32 border-b border-l border-primary/10 rounded-bl-3xl pointer-events-none mb-24 ml-4"></div>
+<div class="fixed bottom-0 right-0 w-32 h-32 border-b border-r border-primary/10 rounded-br-3xl pointer-events-none mb-24 mr-4"></div>
 
 </body></html>
