@@ -17,7 +17,7 @@ function Perfil() {
     {
       icon: 'auto_stories',
       title: 'Baraja Favorita',
-      value: 'EL Mago'
+      value: 'El Mago'
     },
     {
       icon: 'visibility',
