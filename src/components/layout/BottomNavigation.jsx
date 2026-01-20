@@ -3,10 +3,10 @@ import React from 'react'
 function BottomNavigation() {
   const navItems = [
     { icon: 'auto_awesome_mosaic', label: 'Inicio', active: true, href: '/' },
-    { icon: 'grid_view', label: 'Cartas', active: false, href: '#' },
-    { icon: 'history', label: 'Historial', active: false, href: '#' },
-    { icon: 'menu_book', label: 'Diario', active: false, href: '#' },
-    { icon: 'person_outline', label: 'Perfil', active: false, href: '#' }
+    { icon: 'grid_view', label: 'Cartas', active: false, href: '/cartas' },
+    { icon: 'history', label: 'Historial', active: false, href: '/historial' },
+    { icon: 'menu_book', label: 'Diario', active: false, href: '/diario' },
+    { icon: 'person_outline', label: 'Perfil', active: false, href: '/perfil' }
   ]
 
   return (

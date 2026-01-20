@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Inicio from './pages/Inicio'
 import Contacto from './pages/Contacto'
+import Perfil from './pages/Perfil'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       
       {/* Otras rutas */}
       <Route path="/contacto" element={<Contacto />} />
+      <Route path="/perfil" element={<Perfil />} />
       
       {/* Ruta para error 404 */}
       <Route path="*" element={
