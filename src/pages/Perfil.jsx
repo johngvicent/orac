@@ -11,17 +11,17 @@ function Perfil() {
   const stats = [
     {
       icon: 'style',
-      title: 'Daily Readings',
+      title: 'Lecturas Diarias',
       value: '124'
     },
     {
       icon: 'auto_stories',
-      title: 'Favorite Deck',
+      title: 'Baraja Favorita',
       value: 'CELESTIAL ETHER'
     },
     {
       icon: 'visibility',
-      title: 'Insights Shared',
+      title: 'Insights Compartidos',
       value: '42'
     }
   ]
@@ -37,7 +37,7 @@ function Perfil() {
 
       {/* Header */}
       <AppHeader 
-        title="PROFILE" 
+        title="Perfil" 
         leftIcon="settings" 
         rightIcon="share" 
       />
@@ -46,8 +46,8 @@ function Perfil() {
       <main className="relative z-10 flex-1 overflow-y-auto px-6 pb-24">
         {/* Avatar y nombre del usuario */}
         <UserAvatarSection 
-          name="Adept Practitioner"
-          level="IX"
+          name="Practicante Adepto"
+          level="VII"
         />
 
         {/* Grid de estadísticas */}
@@ -62,7 +62,7 @@ function Perfil() {
       </main>
 
       {/* Bottom Navigation - Profile activo */}
-      <BottomNavigation activeItem="Profile" />
+      <BottomNavigation activeItem="Perfil" />
     </div>
   )
 }

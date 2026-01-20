@@ -2,8 +2,8 @@ import React from 'react'
 
 function UserAvatarSection({ 
   avatarUrl = "https://lh3.googleusercontent.com/aida-public/AB6AXuCeWyUKLuimLS5lPqIfUCQ18YEN8_RBIrQibef68XMPPcIPo02opwynGKCdilvCD9lU_oY-O23_bwuDHOGXdmNo1GqVZ8tvGRGy5BCKNpqHtWVqGU2w2GTZe6tcgHFqTmfoLWLDkqiNNSA6_ZMKUikPqg6HjY5OZ_Q9Sf4WcL9_YInC-MnFvw7WsqMgdvErO21wy8mTZ1vND02Gtxy40KTUbLtICBEiUbOc6hLolxCL4DGLAFKaVhoLUGbifEUS_t9K-_V1DKZHYgU",
-  name = "Adept Practitioner",
-  level = "IX"
+  name = "Practicante Adepto",
+  level = "VII"
 }) {
   return (
     <div className="flex flex-col items-center mt-4 mb-8">
@@ -36,7 +36,7 @@ function UserAvatarSection({
 
       {/* Nivel espiritual */}
       <p className="text-primary/60 font-serif italic text-lg tracking-wide">
-        Spirituality Level {level}
+        Nivel Espiritual {level}
       </p>
     </div>
   )

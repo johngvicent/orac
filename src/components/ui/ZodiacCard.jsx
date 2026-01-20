@@ -1,13 +1,13 @@
 import React from 'react'
 
 function ZodiacCard({ 
-  sign = "Scorpio", 
-  house = "Sun In The 8th House",
+  sign = "Escorpio", 
+  house = "Sol en la 8ª Casa",
   icon = "nights_stay" 
 }) {
   return (
     <div 
-      className="relative p-6 rounded-2xl overflow-hidden min-h-[220px]"
+      className="relative p-6 rounded-2xl overflow-hidden min-h-55"
       style={{
         background: 'rgba(27, 36, 48, 0.4)',
         border: '1px solid rgba(212, 175, 55, 0.1)',
@@ -17,7 +17,7 @@ function ZodiacCard({
       {/* Contenido principal */}
       <div className="relative z-10">
         <h3 className="font-display text-sm tracking-[0.2em] text-primary/80 uppercase mb-4">
-          Zodiac Alignment
+          Alineación Zodiacal
         </h3>
         <div className="flex items-center gap-6">
           <div className="w-20 h-20 rounded-full border border-primary/20 flex items-center justify-center bg-black/20">
