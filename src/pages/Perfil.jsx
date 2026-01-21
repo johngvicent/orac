@@ -1,28 +1,49 @@
 import React from 'react'
+import { useAuth } from '../context/AuthContext'
 import CosmicBackground from '../components/layout/CosmicBackground'
 import AppHeader from '../components/layout/AppHeader'
 import BottomNavigation from '../components/layout/BottomNavigation'
 import UserAvatarSection from '../components/ui/UserAvatarSection'
 import StatsGrid from '../components/ui/StatsGrid'
 import ZodiacCard from '../components/ui/ZodiacCard'
+import UserListHelper from '../components/ui/UserListHelper'
 
 function Perfil() {
-  // Datos de estadísticas
-  const stats = [
+  // Usar el contexto de autenticación
+  const { user, logout, openLoginModal } = useAuth()
+
+  // Datos de estadísticas (dinámicos si el usuario está logueado)
+  const stats = user ? [
     {
       icon: 'style',
       title: 'Lecturas Diarias',
-      value: '124'
+      value: user.stats.dailyReadings.toString()
     },
     {
       icon: 'auto_stories',
       title: 'Baraja Favorita',
-      value: 'El Mago'
+      value: user.stats.favoriteCard
     },
     {
       icon: 'visibility',
       title: 'Insights Compartidos',
-      value: '42'
+      value: user.stats.sharedInsights.toString()
+    }
+  ] : [
+    {
+      icon: 'style',
+      title: 'Lecturas Diarias',
+      value: '0'
+    },
+    {
+      icon: 'auto_stories',
+      title: 'Baraja Favorita',
+      value: 'N/A'
+    },
+    {
+      icon: 'visibility',
+      title: 'Insights Compartidos',
+      value: '0'
     }
   ]
 
@@ -46,16 +67,80 @@ function Perfil() {
       <main className="relative z-10 flex-1 overflow-y-auto px-6 pb-24">
         {/* Avatar y nombre del usuario */}
         <UserAvatarSection 
-          name="Practicante Adepto"
-          level="VII"
+          name={user ? user.username : "Practicante Adepto"}
+          level={user ? user.level : "VII"}
         />
+
+        {/* Botón de Login/Logout */}
+        <div className="mt-6 mb-6">
+          {user ? (
+            <div className="bg-linear-to-r from-midnight/50 to-stellar/50 border border-primary/20 rounded-lg p-5">
+              <div className="space-y-4">
+                {/* Header con información principal */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                      <span className="material-icons text-primary text-2xl">account_circle</span>
+                    </div>
+                    <div>
+                      <p className="text-slate-200 font-serif text-lg">{user.username}</p>
+                      <p className="text-sm text-slate-400">{user.email}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {user.role === 'admin' && (
+                      <span className="px-2 py-1 bg-primary/20 border border-primary/30 rounded text-primary text-xs font-display">
+                        ADMIN
+                      </span>
+                    )}
+                    <button
+                      onClick={logout}
+                      className="px-3 py-2 bg-red-500/20 hover:bg-red-500/30 
+                      border border-red-500/40 text-red-300 rounded-lg 
+                      transition-all duration-300 flex items-center gap-2"
+                    >
+                      <span className="material-icons text-sm">logout</span>
+                      <span className="text-xs">Cerrar</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Información adicional */}
+                <div className="grid grid-cols-2 gap-3 pt-3 border-t border-primary/10">
+                  <div className="text-center">
+                    <p className="text-xs text-slate-400 mb-1">Signo Zodiacal</p>
+                    <p className="text-sm text-primary font-serif">{user.zodiacSign}</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-xs text-slate-400 mb-1">Nivel Místico</p>
+                    <p className="text-sm text-primary font-display">{user.level}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <button
+              onClick={openLoginModal}
+              className="w-full bg-linear-to-r from-primary to-primary/80 
+              hover:from-primary/90 hover:to-primary/70 
+              text-background-dark font-display font-semibold 
+              py-4 rounded-lg tracking-wider uppercase
+              transition-all duration-300 
+              shadow-lg hover:shadow-primary/50
+              flex items-center justify-center gap-3"
+            >
+              <span className="material-icons text-2xl">account_circle</span>
+              <span>Iniciar Sesión</span>
+            </button>
+          )}
+        </div>
 
         {/* Grid de estadísticas */}
         <StatsGrid stats={stats} />
 
         {/* Tarjeta zodiacal */}
         <ZodiacCard 
-          sign="Escoprpio"
+          sign={user ? user.zodiacSign : "Escorpio"}
           house="Sol en la 8ª Casa"
           icon="nights_stay"
         />
@@ -63,6 +148,9 @@ function Perfil() {
 
       {/* Bottom Navigation - Profile activo */}
       <BottomNavigation activeItem="Perfil" />
+
+      {/* Helper para mostrar usuarios de prueba (solo desarrollo) */}
+      {!user && <UserListHelper />}
     </div>
   )
 }
