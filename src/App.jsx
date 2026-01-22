@@ -1,6 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
 import Inicio from './pages/Inicio'
+import Historial from './pages/Historial'
+import Diario from './pages/Diario'
+import Modos from './pages/Modos'
 import Contacto from './pages/Contacto'
 import Perfil from './pages/Perfil'
 import LoginModal from './components/ui/LoginModal'
@@ -13,6 +16,11 @@ function App() {
       <Routes>
         {/* Ruta principal de Orac */}
         <Route path="/" element={<Inicio />} />
+
+        {/* Navegación inferior */}
+        <Route path="/cartas" element={<Modos />} />
+        <Route path="/historial" element={<Historial />} />
+        <Route path="/diario" element={<Diario />} />
         
         {/* Otras rutas */}
         <Route path="/contacto" element={<Contacto />} />

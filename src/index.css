@@ -21,3 +21,34 @@ body {
   background: radial-gradient(circle at center, #1B2430 0%, #05070A 100%);
 }
 
+.geometry-line {
+  stroke: rgba(212, 175, 55, 0.2);
+  stroke-width: 0.5;
+  fill: none;
+}
+
+.history-card {
+  background: rgba(10, 14, 20, 0.6);
+  backdrop-filter: blur(8px);
+  border: 0.5px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.history-card:active {
+  border-color: rgba(212, 175, 55, 0.8);
+  background: rgba(27, 36, 48, 0.7);
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2);
+}
+
