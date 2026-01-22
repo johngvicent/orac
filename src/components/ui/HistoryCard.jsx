@@ -5,7 +5,7 @@ const HistoryCard = ({ card, date, interpretation, spreadType, imageUrl }) => {
   return (
     <div className="history-card rounded-lg p-4 flex gap-4 bg-midnight/60 backdrop-blur-sm border border-primary/30 transition-all duration-300 hover:border-primary/80 hover:bg-stellar/70">
       {/* Card Image */}
-      <div className="relative w-16 h-24 flex-shrink-0 bg-black/40 border border-primary/20 rounded-md overflow-hidden">
+      <div className="relative w-16 h-24 shrink-0 bg-black/40 border border-primary/20 rounded-md overflow-hidden">
         {imageUrl ? (
           <img 
             alt={card} 
@@ -13,7 +13,7 @@ const HistoryCard = ({ card, date, interpretation, spreadType, imageUrl }) => {
             src={imageUrl}
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/50 to-black">
+          <div className="absolute inset-0 bg-linear-to-br from-indigo-900/50 to-black">
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="material-icons-outlined text-primary/40 text-2xl">style</span>
             </div>
@@ -24,7 +24,7 @@ const HistoryCard = ({ card, date, interpretation, spreadType, imageUrl }) => {
       {/* Card Content */}
       <div className="flex-1 min-w-0">
         <div className="flex justify-between items-start mb-1">
-          <h3 className="font-display text-primary text-sm tracking-widest uppercase">
+          <h3 className="text-[#D4AF37] font-display text-primary text-sm tracking-widest uppercase">
             {card}
           </h3>
           <span className="text-[10px] text-primary/60 font-serif italic">
@@ -37,10 +37,10 @@ const HistoryCard = ({ card, date, interpretation, spreadType, imageUrl }) => {
         </p>
         
         <div className="mt-2 flex items-center gap-1">
-          <span className="material-icons-outlined text-[10px] text-primary">
+          <span className="text-[#D4AF37] material-icons-outlined text-[10px] text-primary">
             {spreadType === 'Daily Draw' ? 'history' : 'auto_awesome_mosaic'}
           </span>
-          <span className="text-[9px] uppercase tracking-tighter text-primary/50 font-display">
+          <span className="text-[#D4AF37] text-[9px] uppercase tracking-tighter text-primary/50 font-display">
             {spreadType}
           </span>
         </div>

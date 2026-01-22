@@ -21,7 +21,7 @@ function Inicio() {
   }
 
   return (
-    <div className="min-h-screen overflow-hidden flex flex-col bg-[#05070A] text-slate-200">
+    <div className="min-h-screen overflow-hidden flex flex-col bg-[#05070A] text-slate-200 pb-24">
       {/* Fondo cósmico + geometría sagrada */}
       <CosmicBackground />
 

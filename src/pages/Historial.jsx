@@ -11,7 +11,7 @@ const Historial = () => {
   const [historyData, setHistoryData] = useState([
     {
       id: 1,
-      card: 'The Moon',
+      card: 'La Luna',
       date: 'Oct 24, 2023',
       interpretation: 'Deep intuition and hidden fears surface. Trust your inner voice as you navigate through the uncertainty of the night...',
       spreadType: 'Daily Draw',
@@ -56,12 +56,12 @@ const Historial = () => {
       
       {/* Título de la Página */}
       <PageTitle 
-        title="Your Journey" 
-        subtitle="Explore the wisdom of your past readings"
+        title="Tu Jornada" 
+        subtitle="Explora la sabiduría de tus lecturas pasadas"
       />
       
       {/* Contenido Principal */}
-      <main className="relative z-10 flex-1 overflow-y-auto px-6 py-4 space-y-4">
+      <main className="relative z-10 flex-1 overflow-y-auto px-6 py-4 pb-24 space-y-4">
         {historyData.length > 0 ? (
           <>
             {historyData.map((entry) => (
@@ -74,8 +74,6 @@ const Historial = () => {
                 imageUrl={entry.imageUrl}
               />
             ))}
-            {/* Espaciado inferior para evitar que el contenido quede oculto bajo la navegación */}
-            <div className="h-10" />
           </>
         ) : (
           <div className="flex flex-col items-center justify-center py-16 text-center">

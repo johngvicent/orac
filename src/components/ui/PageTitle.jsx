@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const PageTitle = ({ title, subtitle }) => {
   return (
     <div className="relative z-10 pt-8 pb-6 px-6 text-center">
-      <h2 className="font-display text-xl tracking-[0.25em] text-primary uppercase">
+      <h2 className="text-slate-400 font-display text-xl tracking-[0.25em] text-primary uppercase">
         {title}
       </h2>
       {subtitle && (
