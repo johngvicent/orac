@@ -68,3 +68,13 @@ body {
   background: rgba(212, 175, 55, 0.2);
 }
 
+/* Hide scrollbar para carruseles */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
