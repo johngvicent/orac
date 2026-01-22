@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react'
 /**
  * Hook para obtener la fase lunar actual
  * Puede conectarse a una API lunar real o calcular localmente
+ * Las fases lunares se devuelven en español
  */
 const useMoonPhase = (apiUrl = null) => {
   const [moonData, setMoonData] = useState({
-    phase: 'Loading...',
+    phase: 'Cargando...',
     illumination: 0,
     age: 0,
     loading: true,
@@ -43,21 +44,21 @@ const useMoonPhase = (apiUrl = null) => {
 
           let phaseName
           if (moonAge < 1.84566) {
-            phaseName = 'New Moon'
+            phaseName = 'Luna Nueva'
           } else if (moonAge < 5.53699) {
-            phaseName = 'Waxing Crescent'
+            phaseName = 'Luna Creciente'
           } else if (moonAge < 9.22831) {
-            phaseName = 'First Quarter'
+            phaseName = 'Cuarto Creciente'
           } else if (moonAge < 12.91963) {
-            phaseName = 'Waxing Gibbous'
+            phaseName = 'Gibosa Creciente'
           } else if (moonAge < 16.61096) {
-            phaseName = 'Full Moon'
+            phaseName = 'Luna Llena'
           } else if (moonAge < 20.30228) {
-            phaseName = 'Waning Gibbous'
+            phaseName = 'Gibosa Menguante'
           } else if (moonAge < 23.99361) {
-            phaseName = 'Last Quarter'
+            phaseName = 'Cuarto Menguante'
           } else {
-            phaseName = 'Waning Crescent'
+            phaseName = 'Luna Menguante'
           }
 
           setMoonData({
