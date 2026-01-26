@@ -2,11 +2,11 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Orac - Vision Journal</title>
+<title>Orac - Spreads &amp; Knowledge Hub</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Material+Icons+Outlined&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script>
       tailwind.config = {
@@ -35,40 +35,30 @@
         .sacred-geometry-overlay {
             background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAxF1VOzdd3ocoR2utmJxuD08h3jIz0IwiQpEDNUqHpJ1TX1KQ09hWtLmPH2jSNWQ9DaTFSNks9Eh-cKqicDhLXkhzdee0LxTBcAKLI6CgC7edLab0Yhk6Tdj7J0je2uRvlyUNyFBb9CpNGXyjpU95-GOmFCqvYhZM5L5ib0McpY884DwqUcKqoaJezDDl4J9KbcZAuRzn1I_UzjzEfar7sqsqCL_R7T3NL-if0jiOKPIbncSlq0Q_u8Hztsmmqikg-CUwCaXYdD6Q);
             opacity: 0.15;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-        .gold-leaf-button {
+        .gold-leaf-tag {
             background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
-        .gold-leaf-button:active {
-            transform: scale(0.98);
-            filter: brightness(1.1);
-        }
-        .mystic-glow {
-            box-shadow: 0 0 40px 5px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
         .cosmic-gradient {
-            background: radial-gradient(circle at center, #1B2430 0%, #05070A 100%);
+            background: radial-gradient(circle at top, #1B2430 0%, #05070A 100%);
         }
         .geometry-line {
-            stroke: rgba(212, 175, 55, 0.2);
+            stroke: rgba(212, 175, 55, 0.15);
             stroke-width: 0.5;
             fill: none;
         }
-        .hide-scrollbar::-webkit-scrollbar {
+        .custom-scrollbar::-webkit-scrollbar {
             display: none;
         }
-        .hide-scrollbar {
+        .custom-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        .glass-card {
-            background: rgba(10, 14, 20, 0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
         body {
-            min-height: max(884px, 100dvh);
+            min-height: 100dvh;
         }
     </style>
 <style>
@@ -77,152 +67,149 @@
     }
   </style>
   </head>
-<body class="bg-background-dark font-serif text-slate-200 overflow-hidden h-screen flex flex-col">
+<body class="bg-background-dark font-serif text-slate-200 overflow-x-hidden flex flex-col">
 <div class="fixed inset-0 z-0 cosmic-gradient">
 <div class="absolute inset-0 sacred-geometry-overlay"></div>
+<svg class="absolute inset-0 w-full h-full opacity-10 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+<circle class="geometry-line" cx="50" cy="50" r="45"></circle>
+<path class="geometry-line" d="M0 50 L100 50 M50 0 L50 100"></path>
+<polygon class="geometry-line" points="50,5 95,50 50,95 5,50"></polygon>
+</svg>
 </div>
-<header class="relative z-20 pt-12 pb-2 px-6 flex justify-between items-center">
+<header class="relative z-10 pt-12 pb-6 px-6 flex justify-between items-center">
 <div class="w-10 h-10 flex items-center justify-center">
-<span class="material-icons-outlined text-primary text-2xl">auto_awesome</span>
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
 </div>
-<h1 class="font-display text-2xl tracking-[0.2em] text-primary">JOURNAL</h1>
+<h1 class="font-display text-xl tracking-[0.2em] text-primary">ORAC</h1>
 <div class="w-10 h-10 flex items-center justify-center">
-<span class="material-icons-outlined text-primary text-2xl">menu</span>
+<span class="material-symbols-outlined text-primary text-2xl">search</span>
 </div>
 </header>
-<main class="relative z-10 flex-1 flex flex-col overflow-y-auto hide-scrollbar pb-32">
-<section class="mt-4 px-6 relative">
-<div class="flex flex-col items-center">
-<div class="relative w-48 h-48 flex items-center justify-center mb-4">
-<svg class="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 200 200">
-<circle class="geometry-line" cx="100" cy="100" r="80"></circle>
-<circle class="geometry-line" cx="100" cy="100" r="60"></circle>
-<path class="geometry-line" d="M100 10 L100 190 M10 100 L190 100"></path>
-<polygon class="geometry-line" points="100,20 180,100 100,180 20,100"></polygon>
-</svg>
-<div class="relative z-10 w-24 h-24 rounded-full bg-slate-900 overflow-hidden mystic-glow">
-<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-primary/40"></div>
-<div class="absolute inset-0 translate-x-4 bg-slate-950 rounded-full"></div>
-<img alt="Moon Texture" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMi5WEDu2HygCsEkn2q2RDYTIuKN_i06dmSst99eAizoTgm-qLM8pbSGt3TW77AI1uP3UOF6xi75mUv9VTMJU_kJRY6CkIFg05uwEkJcHu8mIDDAE0mwCgVN-KJ8Hf9I7-z8yBnsFZli45B8V4j9hO1zkBOB3PObpSDZu3YW6e60mdgtUY3ewThfJ0B7q2AwuRHXsSEz252BDFBSresCRbkxBcacu7tXTNfIR9HNeLL9JAhUte9k3QgtJ-W8BfS2FuSuQqgkDPC64"/>
-</div>
-<div class="absolute bottom-2 font-display text-[10px] tracking-[0.3em] text-primary/80 uppercase">Waxing Crescent</div>
-</div>
-<div class="flex justify-between w-full max-w-sm gap-2 mt-2">
-<div class="flex flex-col items-center flex-1 py-2 rounded-lg border border-primary/10">
-<span class="text-[10px] uppercase text-slate-500 font-display">Mon</span>
-<span class="text-sm">12</span>
-</div>
-<div class="flex flex-col items-center flex-1 py-2 rounded-lg border border-primary/10">
-<span class="text-[10px] uppercase text-slate-500 font-display">Tue</span>
-<span class="text-sm">13</span>
-</div>
-<div class="flex flex-col items-center flex-1 py-2 rounded-lg border border-primary bg-primary/5">
-<span class="text-[10px] uppercase text-primary font-display">Wed</span>
-<span class="text-sm text-primary font-bold">14</span>
-</div>
-<div class="flex flex-col items-center flex-1 py-2 rounded-lg border border-primary/10">
-<span class="text-[10px] uppercase text-slate-500 font-display">Thu</span>
-<span class="text-sm">15</span>
-</div>
-<div class="flex flex-col items-center flex-1 py-2 rounded-lg border border-primary/10">
-<span class="text-[10px] uppercase text-slate-500 font-display">Fri</span>
-<span class="text-sm">16</span>
-</div>
-</div>
-</div>
-</section>
-<section class="mt-10">
-<div class="px-6 flex justify-between items-center mb-4">
-<h3 class="font-display text-xs tracking-widest text-primary uppercase">Favorite Readings</h3>
-<span class="text-[10px] text-slate-500 uppercase tracking-tighter">See All</span>
-</div>
-<div class="flex overflow-x-auto gap-4 px-6 hide-scrollbar">
-<div class="glass-card min-w-[200px] p-4 rounded-xl flex flex-col gap-3">
-<div class="flex justify-between items-start">
-<span class="text-[10px] text-primary/60 font-display">JUL 12</span>
-<span class="material-symbols-outlined text-primary text-sm">stars</span>
-</div>
-<div class="h-24 w-full rounded bg-slate-800/50 flex items-center justify-center overflow-hidden">
-<img alt="Card Art" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMi5WEDu2HygCsEkn2q2RDYTIuKN_i06dmSst99eAizoTgm-qLM8pbSGt3TW77AI1uP3UOF6xi75mUv9VTMJU_kJRY6CkIFg05uwEkJcHu8mIDDAE0mwCgVN-KJ8Hf9I7-z8yBnsFZli45B8V4j9hO1zkBOB3PObpSDZu3YW6e60mdgtUY3ewThfJ0B7q2AwuRHXsSEz252BDFBSresCRbkxBcacu7tXTNfIR9HNeLL9JAhUte9k3QgtJ-W8BfS2FuSuQqgkDPC64"/>
-<div class="absolute text-[10px] uppercase tracking-widest text-white/80">The Lovers</div>
-</div>
-<p class="text-xs italic text-slate-400 leading-relaxed line-clamp-2">"A crossroad of the heart requires balance..."</p>
-</div>
-<div class="glass-card min-w-[200px] p-4 rounded-xl flex flex-col gap-3">
-<div class="flex justify-between items-start">
-<span class="text-[10px] text-primary/60 font-display">JUL 10</span>
-<span class="material-symbols-outlined text-primary text-sm">stars</span>
-</div>
-<div class="h-24 w-full rounded bg-slate-800/50 flex items-center justify-center overflow-hidden">
-<img alt="Card Art" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMi5WEDu2HygCsEkn2q2RDYTIuKN_i06dmSst99eAizoTgm-qLM8pbSGt3TW77AI1uP3UOF6xi75mUv9VTMJU_kJRY6CkIFg05uwEkJcHu8mIDDAE0mwCgVN-KJ8Hf9I7-z8yBnsFZli45B8V4j9hO1zkBOB3PObpSDZu3YW6e60mdgtUY3ewThfJ0B7q2AwuRHXsSEz252BDFBSresCRbkxBcacu7tXTNfIR9HNeLL9JAhUte9k3QgtJ-W8BfS2FuSuQqgkDPC64"/>
-<div class="absolute text-[10px] uppercase tracking-widest text-white/80">The Star</div>
-</div>
-<p class="text-xs italic text-slate-400 leading-relaxed line-clamp-2">"Hope returns after a period of shadow..."</p>
-</div>
-<div class="glass-card min-w-[200px] p-4 rounded-xl flex flex-col gap-3">
-<div class="flex justify-between items-start">
-<span class="text-[10px] text-primary/60 font-display">JUL 08</span>
-<span class="material-symbols-outlined text-primary text-sm">stars</span>
-</div>
-<div class="h-24 w-full rounded bg-slate-800/50 flex items-center justify-center overflow-hidden">
-<img alt="Card Art" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMi5WEDu2HygCsEkn2q2RDYTIuKN_i06dmSst99eAizoTgm-qLM8pbSGt3TW77AI1uP3UOF6xi75mUv9VTMJU_kJRY6CkIFg05uwEkJcHu8mIDDAE0mwCgVN-KJ8Hf9I7-z8yBnsFZli45B8V4j9hO1zkBOB3PObpSDZu3YW6e60mdgtUY3ewThfJ0B7q2AwuRHXsSEz252BDFBSresCRbkxBcacu7tXTNfIR9HNeLL9JAhUte9k3QgtJ-W8BfS2FuSuQqgkDPC64"/>
-<div class="absolute text-[10px] uppercase tracking-widest text-white/80">High Priestess</div>
-</div>
-<p class="text-xs italic text-slate-400 leading-relaxed line-clamp-2">"Secrets are whispered in the silence..."</p>
-</div>
-</div>
-</section>
-<section class="mt-10 px-6">
-<h3 class="font-display text-xs tracking-widest text-primary uppercase mb-4">Recent Entries</h3>
-<div class="space-y-3">
-<div class="p-4 border-b border-primary/10 flex justify-between items-center">
+<main class="relative z-10 flex-1 pb-32">
+<section class="mb-12">
+<h2 class="font-display text-sm tracking-[0.3em] text-primary uppercase px-6 mb-6">Choose Your Spread</h2>
+<div class="flex overflow-x-auto custom-scrollbar gap-5 px-6 pb-4">
+<div class="flex-none w-64 aspect-[3/4] rounded-xl border border-primary/40 bg-black/40 backdrop-blur-md p-6 flex flex-col justify-between items-center text-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-primary/80 mb-2">grid_view</span>
 <div>
-<h4 class="text-sm font-semibold tracking-wide">Reflections on Transition</h4>
-<span class="text-[10px] text-slate-500 uppercase">Yesterday • 11:22 PM</span>
+<h3 class="font-display text-lg text-primary mb-2">Celtic Cross</h3>
+<p class="text-sm italic text-slate-400">Ten cards for deep insight into the past, present, and future trajectory.</p>
 </div>
-<span class="material-icons-outlined text-slate-600">chevron_right</span>
+<button class="mt-4 border-b border-primary/40 text-xs tracking-widest text-primary uppercase pb-1">Select Path</button>
 </div>
-<div class="p-4 border-b border-primary/10 flex justify-between items-center">
+<div class="flex-none w-64 aspect-[3/4] rounded-xl border border-primary/40 bg-black/40 backdrop-blur-md p-6 flex flex-col justify-between items-center text-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-primary/80 mb-2">view_column</span>
 <div>
-<h4 class="text-sm font-semibold tracking-wide">The Full Moon's Call</h4>
-<span class="text-[10px] text-slate-500 uppercase">July 12 • 9:15 PM</span>
+<h3 class="font-display text-lg text-primary mb-2">Three Card</h3>
+<p class="text-sm italic text-slate-400">The classic Mind, Body, and Spirit spread for daily clarity.</p>
 </div>
-<span class="material-icons-outlined text-slate-600">chevron_right</span>
+<button class="mt-4 border-b border-primary/40 text-xs tracking-widest text-primary uppercase pb-1">Select Path</button>
+</div>
+<div class="flex-none w-64 aspect-[3/4] rounded-xl border border-primary/40 bg-black/40 backdrop-blur-md p-6 flex flex-col justify-between items-center text-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-primary/80 mb-2">rectangle</span>
+<div>
+<h3 class="font-display text-lg text-primary mb-2">The Oracle</h3>
+<p class="text-sm italic text-slate-400">A single card focused on a specific question or intention.</p>
+</div>
+<button class="mt-4 border-b border-primary/40 text-xs tracking-widest text-primary uppercase pb-1">Select Path</button>
 </div>
 </div>
 </section>
+<section class="mb-12 px-6">
+<h2 class="font-display text-sm tracking-[0.3em] text-primary uppercase mb-6">Arcana Lore</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 rounded-lg bg-white/5 border border-white/10">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-midnight">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+</div>
+<div class="flex-1">
+<h4 class="font-display text-primary text-md tracking-wider">The Major Arcana</h4>
+<p class="text-sm italic text-slate-400">The 22 pillars of the Fool's Journey.</p>
+</div>
+<span class="material-symbols-outlined text-primary/40">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-white/5 border border-white/10">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-midnight">
+<span class="material-symbols-outlined text-primary text-xl">layers</span>
+</div>
+<div class="flex-1">
+<h4 class="font-display text-primary text-md tracking-wider">The Minor Arcana</h4>
+<p class="text-sm italic text-slate-400">Elemental forces: Wands, Cups, Swords, Pentacles.</p>
+</div>
+<span class="material-symbols-outlined text-primary/40">chevron_right</span>
+</div>
+</div>
+</section>
+<section class="mb-12 px-6">
+<h2 class="font-display text-sm tracking-[0.3em] text-primary uppercase mb-6">Orac Boutique</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="group">
+<div class="aspect-square rounded-lg bg-midnight border border-white/10 overflow-hidden relative mb-2">
+<img alt="Tarot Deck" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMi5WEDu2HygCsEkn2q2RDYTIuKN_i06dmSst99eAizoTgm-qLM8pbSGt3TW77AI1uP3UOF6xi75mUv9VTMJU_kJRY6CkIFg05uwEkJcHu8mIDDAE0mwCgVN-KJ8Hf9I7-z8yBnsFZli45B8V4j9hO1zkBOB3PObpSDZu3YW6e60mdgtUY3ewThfJ0B7q2AwuRHXsSEz252BDFBSresCRbkxBcacu7tXTNfIR9HNeLL9JAhUte9k3QgtJ-W8BfS2FuSuQqgkDPC64"/>
+<div class="absolute bottom-2 right-2 gold-leaf-tag text-midnight px-2 py-0.5 rounded text-[10px] font-bold font-display">$44</div>
+</div>
+<h5 class="text-sm font-display text-primary uppercase tracking-tighter">Midnight Deck</h5>
+<p class="text-xs italic text-slate-500">Gold-foiled 78 cards</p>
+</div>
+<div class="group">
+<div class="aspect-square rounded-lg bg-midnight border border-white/10 overflow-hidden relative mb-2">
+<div class="w-full h-full flex items-center justify-center bg-stellar/50">
+<span class="material-symbols-outlined text-4xl text-primary/20">diamond</span>
+</div>
+<div class="absolute bottom-2 right-2 gold-leaf-tag text-midnight px-2 py-0.5 rounded text-[10px] font-bold font-display">$28</div>
+</div>
+<h5 class="text-sm font-display text-primary uppercase tracking-tighter">Obsidian Crystal</h5>
+<p class="text-xs italic text-slate-500">Ethically sourced</p>
+</div>
+</div>
+</section>
+<footer class="px-6 py-8 border-t border-white/5 flex flex-col items-center text-center">
+<h2 class="font-display text-xs tracking-[0.3em] text-primary uppercase mb-6">Connect with the Creators</h2>
+<div class="flex gap-8 mb-8">
+<a class="text-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">forum</span>
+</a>
+<a class="text-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+<button class="border border-primary text-primary font-display text-[10px] tracking-[0.2em] uppercase px-8 py-3 rounded-full hover:bg-primary hover:text-midnight transition-all">
+                Contact Sanctuary
+            </button>
+<p class="mt-8 text-[10px] text-slate-600 tracking-widest">© MMXXIV ORAC SACRED ARTS</p>
+</footer>
 </main>
-<div class="fixed bottom-24 left-0 right-0 z-30 px-8 flex justify-center pointer-events-none">
-<button class="gold-leaf-button w-full max-w-xs py-4 px-8 rounded-full text-midnight font-display font-bold tracking-[0.15em] uppercase text-sm flex items-center justify-center gap-3 pointer-events-auto shadow-2xl">
-<span class="material-symbols-outlined text-xl">auto_stories</span>
-            Write New Vision
-        </button>
-</div>
-<nav class="fixed bottom-0 left-0 right-0 z-20 pb-8 pt-4 px-4 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent">
+<nav class="fixed bottom-0 left-0 right-0 z-50 pb-8 pt-4 px-4 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent">
 <div class="flex justify-around items-end max-w-md mx-auto">
 <a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
-<span class="material-icons-outlined text-slate-400 group-hover:text-primary">auto_awesome_mosaic</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">auto_awesome_mosaic</span>
 <span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">Home</span>
 </a>
-<a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
-<span class="material-icons-outlined text-slate-400 group-hover:text-primary">grid_view</span>
-<span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">Spreads</span>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+<span class="text-[10px] uppercase tracking-tighter font-display text-primary">Spreads</span>
 </a>
 <a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
-<span class="material-icons-outlined text-slate-400 group-hover:text-primary">history</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">history</span>
 <span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">History</span>
 </a>
-<a class="flex flex-col items-center gap-1 group" href="#">
-<span class="material-icons-outlined text-primary">menu_book</span>
-<span class="text-[10px] uppercase tracking-tighter font-display text-primary">Journal</span>
+<a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">menu_book</span>
+<span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">Journal</span>
 </a>
 <a class="flex flex-col items-center gap-1 group opacity-50 hover:opacity-100 transition-opacity" href="#">
-<span class="material-icons-outlined text-slate-400 group-hover:text-primary">person_outline</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">person_outline</span>
 <span class="text-[10px] uppercase tracking-tighter font-display text-slate-400 group-hover:text-primary">Profile</span>
 </a>
 </div>
 </nav>
-<div class="fixed top-0 left-0 w-24 h-24 border-t border-l border-primary/10 rounded-tl-3xl pointer-events-none mt-10 ml-4"></div>
-<div class="fixed top-0 right-0 w-24 h-24 border-t border-r border-primary/10 rounded-tr-3xl pointer-events-none mt-10 mr-4"></div>
+<div class="fixed top-0 left-0 w-24 h-24 border-t border-l border-primary/10 rounded-tl-2xl pointer-events-none mt-10 ml-4"></div>
+<div class="fixed top-0 right-0 w-24 h-24 border-t border-r border-primary/10 rounded-tr-2xl pointer-events-none mt-10 mr-4"></div>
 
 </body></html>

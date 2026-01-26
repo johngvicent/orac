@@ -1,35 +1,72 @@
-import React from 'react'
+import React, { useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import CosmicBackground from '../components/layout/CosmicBackground'
 import AppHeader from '../components/layout/AppHeader'
 import BottomNavigation from '../components/layout/BottomNavigation'
+import ContactFooter from '../components/layout/ContactFooter'
+import SpreadCarousel from '../components/oracle/SpreadCarousel'
+import LoreSection from '../components/oracle/LoreSection'
+import BoutiqueSection from '../components/oracle/BoutiqueSection'
+import { spreadsData, loreData, boutiqueProducts } from '../data/modosData'
 
+/**
+ * Modos - Página de Spreads & Knowledge Hub
+ * Permite al usuario explorar diferentes tiradas, conocer sobre arcanos y productos
+ */
 function Modos() {
+	const navigate = useNavigate()
+
+	// Handler para selección de tirada
+	const handleSpreadSelect = useCallback((spread) => {
+		console.log('Spread selected:', spread)
+		// Aquí se puede navegar a una página específica de la tirada
+		// navigate(`/tirada/${spread.id}`)
+	}, [])
+
+	// Handler para selección de lore
+	const handleLoreClick = useCallback((lore) => {
+		console.log('Lore clicked:', lore)
+		// Navegar a la página de información del arcano
+		// navigate(`/arcano/${lore.id}`)
+	}, [])
+
+	// Handler para selección de producto
+	const handleProductSelect = useCallback((product) => {
+		console.log('Product selected:', product)
+		// Aquí se puede implementar la lógica de compra o detalles del producto
+	}, [])
+
+	// Handler para contacto
+	const handleContactClick = useCallback(() => {
+		navigate('/contacto')
+	}, [navigate])
+
 	return (
 		<div className="min-h-screen overflow-hidden flex flex-col bg-background-dark text-slate-200">
 			<CosmicBackground />
 			<AppHeader />
 
-			<main className="relative z-10 flex-1 overflow-y-auto px-6 py-6 pb-24">
-				<div className="max-w-md mx-auto space-y-4">
-					<div className="bg-midnight/60 backdrop-blur-sm border border-primary/20 rounded-lg p-6">
-						<h2 className="font-display text-primary tracking-widest uppercase text-sm">
-							Cartas
-						</h2>
-						<p className="mt-3 text-slate-400 font-serif italic text-sm leading-relaxed">
-							Aquí podrás elegir tiradas y explorar arcanos. Esta sección está en construcción.
-						</p>
-					</div>
+			<main className="relative z-10 flex-1 overflow-y-auto pb-24">
+				{/* Carrusel de tiradas */}
+				<SpreadCarousel 
+					spreads={spreadsData} 
+					onSpreadSelect={handleSpreadSelect}
+				/>
 
-					<div className="bg-linear-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-5 backdrop-blur-sm">
-						<div className="flex items-center gap-3">
-							<span className="material-icons text-primary text-2xl">auto_awesome_mosaic</span>
-							<div>
-								<p className="text-primary font-display tracking-wide">Tiradas</p>
-								<p className="text-slate-400 text-sm">Daily Draw, Celtic Cross, y más.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				{/* Sección de conocimiento de arcanos */}
+				<LoreSection 
+					loreItems={loreData}
+					onLoreClick={handleLoreClick}
+				/>
+
+				{/* Sección de boutique */}
+				<BoutiqueSection 
+					products={boutiqueProducts}
+					onProductSelect={handleProductSelect}
+				/>
+
+				{/* Footer de contacto */}
+				<ContactFooter onContactClick={handleContactClick} />
 			</main>
 
 			<BottomNavigation />
