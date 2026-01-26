@@ -96,6 +96,20 @@ body {
   color: transparent; /* Fallback */
 }
 
+.gold-leaf-gradient-svg {
+  color: #D4AF37;
+  fill: url(#goldGradient);
+}
+
+/* Fallback para navegadores que no soportan gradientes en SVG */
+.gold-leaf-gradient-svg svg {
+  color: #D4AF37;
+}
+
+.gold-leaf-gradient-svg svg * {
+  fill: #D4AF37;
+}
+
 .gold-leaf-bg {
   background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
