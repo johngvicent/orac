@@ -28,7 +28,7 @@ function BoutiqueProductCard({ image, title, subtitle, price, onProductClick }) 
         )}
         
         {/* Etiqueta de precio */}
-        <div className="absolute bottom-2 right-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] text-midnight px-2 py-0.5 rounded text-[10px] font-bold font-display shadow-lg">
+        <div className="absolute bottom-2 right-2 bg-linear-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] text-midnight px-2 py-0.5 rounded text-[10px] font-bold font-display shadow-lg">
           ${price}
         </div>
       </div>

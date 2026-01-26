@@ -7,26 +7,26 @@ export const spreadsData = [
   {
     id: 'celtic-cross',
     icon: 'grid_view',
-    title: 'Celtic Cross',
-    description: 'Ten cards for deep insight into the past, present, and future trajectory.'
+    title: 'Cruz Celta',
+    description: 'Diez cartas para una profunda visión del pasado, presente y trayectoria futura.'
   },
   {
     id: 'three-card',
     icon: 'view_column',
-    title: 'Three Card',
-    description: 'The classic Mind, Body, and Spirit spread for daily clarity.'
+    title: 'Triskel',
+    description: 'La clásica tirada de Mente, Cuerpo y Espíritu para claridad diaria.'
   },
   {
     id: 'oracle',
     icon: 'rectangle',
-    title: 'The Oracle',
-    description: 'A single card focused on a specific question or intention.'
+    title: 'El Oráculo',
+    description: 'Una sola carta centrada en una pregunta o intención específica.'
   },
   {
     id: 'horseshoe',
     icon: 'nature',
-    title: 'Horseshoe',
-    description: 'Seven cards revealing the path ahead with clarity and wisdom.'
+    title: 'Herradura',
+    description: 'Siete cartas que revelan el camino por delante con claridad y sabiduría.'
   }
 ]
 
@@ -34,44 +34,44 @@ export const loreData = [
   {
     id: 'major-arcana',
     icon: 'auto_awesome',
-    title: 'The Major Arcana',
-    description: "The 22 pillars of the Fool's Journey."
+    title: 'Los Arcanos Mayores',
+    description: "Los 22 pilares del Viaje del Loco."
   },
   {
     id: 'minor-arcana',
     icon: 'layers',
-    title: 'The Minor Arcana',
-    description: 'Elemental forces: Wands, Cups, Swords, Pentacles.'
+    title: 'Los Arcanos Menores',
+    description: 'Fuerzas elementales: Bastos, Copas, Espadas, Oros.'
   }
 ]
 
 export const boutiqueProducts = [
   {
     id: 'midnight-deck',
-    image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&h=400&fit=crop',
-    title: 'Midnight Deck',
-    subtitle: 'Gold-foiled 78 cards',
-    price: 44
+    image: '/src/assets/store/tattoo-tarot-b.jpg',
+    title: 'Tattoo Tarot Deck',
+    subtitle: 'Estética-Urbana 78 cartas',
+    price: 79.99
   },
   {
     id: 'obsidian-crystal',
-    image: null, // Sin imagen, usará el placeholder
-    title: 'Obsidian Crystal',
-    subtitle: 'Ethically sourced',
-    price: 28
+    image: '/src/assets/store/alch-tarot-a.jpg', 
+    title: 'Tarot Alquímico',
+    subtitle: 'Ilustraciones Místicas 78 cartas',
+    price: 59.99
   },
   {
     id: 'velvet-cloth',
-    image: 'https://images.unsplash.com/photo-1523438097201-512ae7d59c44?w=400&h=400&fit=crop',
-    title: 'Velvet Cloth',
-    subtitle: 'Royal purple reading mat',
-    price: 32
+    image: '/src/assets/store/libro-astrology-a.jpg',
+    title: 'Libro de Astrología',
+    subtitle: 'Librería Akelarre 4ta Edición',
+    price: 45.5
   },
   {
     id: 'incense-set',
-    image: null,
-    title: 'Incense Set',
-    subtitle: 'Sacred sage & myrrh',
-    price: 18
+    image: null, // Sin imagen, usará el placeholder
+    title: 'Ver la tienda completa',
+    subtitle: 'Envíos internacionales disponibles',
+    price: null // Precio no disponible
   }
 ]

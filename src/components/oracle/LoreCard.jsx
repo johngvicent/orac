@@ -12,7 +12,7 @@ function LoreCard({ icon, title, description, onClick }) {
       className="w-full flex items-center gap-4 p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-300 group"
     >
       {/* Icono circular */}
-      <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-midnight flex-shrink-0 group-hover:border-primary/50 transition-colors">
+      <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-midnight shrink-0 group-hover:border-primary/50 transition-colors">
         <span className="material-icons-outlined text-primary text-xl">
           {icon}
         </span>

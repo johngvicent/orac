@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
  */
 function SpreadCard({ icon, title, description, onSelect }) {
   return (
-    <div className="flex-none w-64 aspect-[3/4] rounded-xl border border-primary/40 bg-black/40 backdrop-blur-md p-6 flex flex-col justify-between items-center text-center relative overflow-hidden group">
+    <div className="flex-none w-64 aspect-3/4 rounded-xl border border-primary/40 bg-black/40 backdrop-blur-md p-6 flex flex-col justify-between items-center text-center relative overflow-hidden group">
       {/* Efecto hover */}
       <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
