@@ -70,8 +70,8 @@ export const boutiqueProducts = [
   {
     id: 'incense-set',
     image: null, // Sin imagen, usará el placeholder
-    title: 'Ver la tienda completa',
-    subtitle: 'Envíos internacionales disponibles',
+    title: 'Explora Nuestra Boutique',
+    subtitle: 'Nuestros productos detallados',
     price: null // Precio no disponible
   }
 ]
