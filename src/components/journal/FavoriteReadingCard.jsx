@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const FavoriteReadingCard = ({ date, cardName, interpretation, imageUrl, isFavorite = true }) => {
   return (
-    <div className="bg-midnight/60 backdrop-blur-sm border border-primary/30 min-w-[200px] p-4 rounded-xl flex flex-col gap-3 transition-all duration-300 hover:border-primary/50 cursor-pointer">
+    <div className="bg-midnight/60 backdrop-blur-sm border border-primary/30 min-w-50 p-4 rounded-xl flex flex-col gap-3 transition-all duration-300 hover:border-primary/50 cursor-pointer">
       <div className="flex justify-between items-start">
         <span className="text-[10px] text-primary/60 font-display uppercase">
           {date}
