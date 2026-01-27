@@ -1,13 +1,40 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
-function TarotCard({ imageUrl, title, description }) {
+function TarotCard({
+  card,
+  imageUrl,
+  title,
+  description,
+  meaning,
+  footerLabel = 'Daily Reading'
+}) {
+  const resolved = useMemo(() => {
+    if (card) {
+      return {
+        id: card.id,
+        imageUrl: card.image ?? imageUrl,
+        title: card.nombre ?? title,
+        description: card.descripcion ?? description,
+        meaning: card.significado ?? meaning
+      }
+    }
+
+    return {
+      id: undefined,
+      imageUrl,
+      title,
+      description,
+      meaning
+    }
+  }, [card, description, imageUrl, meaning, title])
+
   return (
     <div className="p-20">
       {/* Imagen de la carta */}
       <div className="relative mb-6 rounded-xl overflow-hidden border border-[#D4AF37]/20">
         <img
-          src={imageUrl}
-          alt={title}
+          src={resolved.imageUrl}
+          alt={resolved.title}
           className="w-full h-auto object-cover"
         />
         {/* Overlay sutil */}
@@ -16,13 +43,21 @@ function TarotCard({ imageUrl, title, description }) {
 
       {/* Título de la carta */}
       <h2 className="font-[Cinzel] text-3xl text-[#D4AF37] text-center mb-4 tracking-wide">
-        {title}
+        {resolved.title}
       </h2>
 
       {/* Descripción */}
-      {description && (
+      {resolved.description && (
         <p className="font-[Cormorant_Garamond] text-slate-300 text-center text-lg leading-relaxed italic">
-          {description}
+          {resolved.description}
+        </p>
+      )}
+
+      {/* Significado */}
+      {resolved.meaning && (
+        <p className="mt-4 font-[Cormorant_Garamond] text-slate-400 text-center text-base leading-relaxed">
+          <span className="text-[#D4AF37]/80 font-[Cinzel] tracking-wide">Significado:</span>{' '}
+          {resolved.meaning}
         </p>
       )}
 
@@ -30,7 +65,7 @@ function TarotCard({ imageUrl, title, description }) {
       <div className="flex justify-center items-center gap-4 mt-6 pt-4 border-t border-[#D4AF37]/20">
         <div className="w-2 h-2 rounded-full bg-[#D4AF37]"></div>
         <span className="font-[Cinzel] text-[#D4AF37]/60 text-xs tracking-widest uppercase">
-          Daily Reading
+          {footerLabel}{resolved.id !== undefined && resolved.id !== null ? ` · #${resolved.id}` : ''}
         </span>
         <div className="w-2 h-2 rounded-full bg-[#D4AF37]"></div>
       </div>

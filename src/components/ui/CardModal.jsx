@@ -38,7 +38,7 @@ function CardModal({ children, onClose, isOpen }) {
         <div className="absolute inset-0 rounded-2xl bg-[#D4AF37]/20 blur-3xl animate-pulse"></div>
 
         {/* Contenido del modal */}
-        <div className="relative bg-linear-to-b from-[#1B2430] to-[#0A0E14] rounded-2xl border-2 border-[#D4AF37]/30 shadow-2xl overflow-hidden">
+        <div className="relative bg-linear-to-b from-[#1B2430] to-[#0A0E14] rounded-2xl border-2 border-[#D4AF37]/30 shadow-2xl overflow-y-auto max-h-200">
           {children}
         </div>
       </div>

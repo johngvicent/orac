@@ -2,6 +2,7 @@ const arcanosMayores = [
     {
         id: 0,
         nombre: "El Loco",
+        image:"/src/assets/cards/the-fool-a.jpg",
         nombreIngles: "The Fool",
         descripcion: "Representa la inocencia, la libertad y el potencial ilimitado. Es el inicio de un viaje espiritual, simbolizando la fe en lo desconocido y la confianza en el universo.",
         significado: "Nuevo comienzo, aventura, fe, inocencia, libertad espiritual"
@@ -37,8 +38,8 @@ const arcanosMayores = [
     },
     {
         id: 5,
-        nombre: "El Hierofante",
-        nombreIngles: "The Hierophant",
+        nombre: "El Papa",
+        nombreIngles: "The Hihgh Priest",
         descripcion: "Simboliza la espiritualidad, la enseñanza y la tradición. Representa la guía espiritual, la educación y la conexión con lo sagrado.",
         significado: "Espiritualidad, enseñanza, tradición, guía espiritual, educación"
     },

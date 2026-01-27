@@ -6,10 +6,14 @@ import BottomNavigation from '../components/layout/BottomNavigation'
 import DailyCardPrompt from '../components/oracle/DailyCardPrompt'
 import CardModal from '../components/ui/CardModal'
 import TarotCard from '../components/oracle/TarotCard'
+import GoldLeafButton from '../components/ui/GoldLeafButton'
+import dailyCards from '../data/daily'
+import { useDailyTarotCard } from '../hooks/useDailyTarotCard'
 
 function Inicio() {
   const [modalOpen, setModalOpen] = useState(false)
   const { user, isAuthenticated } = useAuth()
+  const { card: dailyCard, redraw } = useDailyTarotCard(dailyCards)
 
   const handleDrawCard = () => {
     console.log('Drawing daily card...')
@@ -50,11 +54,13 @@ function Inicio() {
 
       {/* Portal Modal - Se renderiza fuera de esta jerarquía */}
       <CardModal isOpen={modalOpen} onClose={handleCloseModal}>
-        <TarotCard
-          imageUrl="/el-mago-a.jpg"
-          title="El Mago"
-          description="Hoy es un día de manifestación y creatividad. Tienes todas las herramientas que necesitas para materializar tus deseos. Confía en tu habilidad innata para transformar ideas en realidad."
-        />
+        <TarotCard card={dailyCard} footerLabel="Tu carta del día" />
+
+        <div className="flex justify-center items-center p-8">
+          <GoldLeafButton onClick={redraw} icon="shuffle">
+            Volver a sacar carta
+          </GoldLeafButton>
+        </div>
       </CardModal>
     </div>
   )
