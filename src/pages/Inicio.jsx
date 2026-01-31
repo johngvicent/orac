@@ -32,20 +32,6 @@ function Inicio() {
       {/* Header con logo e iconos */}
       <AppHeader />
 
-      {/* Mensaje de bienvenida para usuarios autenticados */}
-      {isAuthenticated && (
-        <div className="relative z-10 mx-6 mt-4 bg-linear-to-r from-primary/10 to-primary/5 
-                      border border-primary/20 rounded-lg p-4 backdrop-blur-sm">
-          <div className="flex items-center gap-3">
-            <span className="material-icons text-primary text-2xl">auto_awesome</span>
-            <div>
-              <p className="text-primary font-display tracking-wide">Bienvenido, {user.email.split('@')[0]}</p>
-              <p className="text-slate-400 text-sm">El oráculo te espera...</p>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Contenido principal: ojo místico + prompt */}
       <DailyCardPrompt onDrawCard={handleDrawCard} />
 

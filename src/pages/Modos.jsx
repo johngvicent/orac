@@ -47,26 +47,28 @@ function Modos() {
 			<AppHeader />
 
 			<main className="relative z-10 flex-1 overflow-y-auto pb-24">
-				{/* Carrusel de tiradas */}
-				<SpreadCarousel 
-					spreads={spreadsData} 
-					onSpreadSelect={handleSpreadSelect}
-				/>
+				<div className="w-full max-w-200 mx-auto">
+					{/* Carrusel de tiradas */}
+					<SpreadCarousel 
+						spreads={spreadsData} 
+						onSpreadSelect={handleSpreadSelect}
+					/>
 
-				{/* Sección de conocimiento de arcanos */}
-				<LoreSection 
-					loreItems={loreData}
-					onLoreClick={handleLoreClick}
-				/>
+					{/* Sección de conocimiento de arcanos */}
+					<LoreSection 
+						loreItems={loreData}
+						onLoreClick={handleLoreClick}
+					/>
 
-				{/* Sección de boutique */}
-				<BoutiqueSection 
-					products={boutiqueProducts}
-					onProductSelect={handleProductSelect}
-				/>
+					{/* Sección de boutique */}
+					<BoutiqueSection 
+						products={boutiqueProducts}
+						onProductSelect={handleProductSelect}
+					/>
 
-				{/* Footer de contacto */}
-				<ContactFooter onContactClick={handleContactClick} />
+					{/* Footer de contacto */}
+					<ContactFooter onContactClick={handleContactClick} />
+				</div>
 			</main>
 
 			<BottomNavigation />

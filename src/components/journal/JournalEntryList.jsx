@@ -20,7 +20,7 @@ const JournalEntryList = ({ entries = [] }) => {
   return (
     <section className="mt-10 px-6">
       <h3 className="font-display text-xs tracking-widest text-primary uppercase mb-4">
-        Recent Entries
+        Entradas Recientes
       </h3>
       
       <div className="space-y-3">

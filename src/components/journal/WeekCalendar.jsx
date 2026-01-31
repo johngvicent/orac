@@ -13,7 +13,7 @@ const WeekCalendar = ({ days = [], activeDay = null, loading = false }) => {
   const daysToRender = days.length > 0 ? days : defaultDays
 
   return (
-    <div className={`flex justify-between w-full max-w-sm gap-2 mt-2 transition-opacity duration-300 ${loading ? 'opacity-50' : 'opacity-100'}`}>
+    <div className={`flex justify-between w-full max-w-sm mx-auto gap-2 mt-2 transition-opacity duration-300 ${loading ? 'opacity-50' : 'opacity-100'}`}>
       {loading && daysToRender.length === 0 ? (
         // Skeleton solo si no hay datos previos
         [1, 2, 3, 4, 5].map((i) => (

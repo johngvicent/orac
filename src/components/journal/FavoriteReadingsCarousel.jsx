@@ -7,25 +7,25 @@ const FavoriteReadingsCarousel = ({ readings = [] }) => {
     {
       id: 1,
       date: 'Jul 12',
-      cardName: 'The Lovers',
-      interpretation: '"A crossroad of the heart requires balance..."',
-      imageUrl: null,
+      cardName: 'Los Enamorados',
+      interpretation: '"Un cruce en el corazón requiere equilibrio..."',
+      imageUrl: "/src/assets/cards/the-lovers-a.jpg",
       isFavorite: true
     },
     {
       id: 2,
       date: 'Jul 10',
-      cardName: 'The Star',
-      interpretation: '"Hope returns after a period of shadow..."',
-      imageUrl: null,
+      cardName: 'La Estrella',
+      interpretation: '"La esperanza regresa después de un período de sombra..."',
+      imageUrl: "/src/assets/cards/star-a.jpg",
       isFavorite: true
     },
     {
       id: 3,
       date: 'Jul 08',
-      cardName: 'High Priestess',
-      interpretation: '"Secrets are whispered in the silence..."',
-      imageUrl: null,
+      cardName: 'La Sacerdotisa',
+      interpretation: '"Los secretos se susurran en el silencio..."',
+      imageUrl: "/src/assets/cards/la-sacerdotiza-a.jpg",
       isFavorite: true
     }
   ]
@@ -36,10 +36,10 @@ const FavoriteReadingsCarousel = ({ readings = [] }) => {
     <section className="mt-10">
       <div className="px-6 flex justify-between items-center mb-4">
         <h3 className="font-display text-xs tracking-widest text-primary uppercase">
-          Favorite Readings
+          Lecturas Favoritas
         </h3>
         <button className="text-[10px] text-slate-500 uppercase tracking-tighter hover:text-primary transition-colors">
-          See All
+          Ver Todas
         </button>
       </div>
 

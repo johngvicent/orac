@@ -66,74 +66,11 @@ function Perfil() {
       {/* Main Content */}
       <main className="relative z-10 flex-1 overflow-y-auto px-6 pb-24">
         {/* Avatar y nombre del usuario */}
-        <UserAvatarSection 
-          name={user ? user.username : "Practicante Adepto"}
-          level={user ? user.level : "VII"}
+        <UserAvatarSection
+          user={user}
+          onLogin={openLoginModal}
+          onLogout={logout}
         />
-
-        {/* Botón de Login/Logout */}
-        <div className="mt-6 mb-6">
-          {user ? (
-            <div className="bg-linear-to-r from-midnight/50 to-stellar/50 border border-primary/20 rounded-lg p-5">
-              <div className="space-y-4">
-                {/* Header con información principal */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="material-icons text-primary text-2xl">account_circle</span>
-                    </div>
-                    <div>
-                      <p className="text-slate-200 font-serif text-lg">{user.username}</p>
-                      <p className="text-sm text-slate-400">{user.email}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {user.role === 'admin' && (
-                      <span className="px-2 py-1 bg-primary/20 border border-primary/30 rounded text-primary text-xs font-display">
-                        ADMIN
-                      </span>
-                    )}
-                    <button
-                      onClick={logout}
-                      className="px-3 py-2 bg-red-500/20 hover:bg-red-500/30 
-                      border border-red-500/40 text-red-300 rounded-lg 
-                      transition-all duration-300 flex items-center gap-2"
-                    >
-                      <span className="material-icons text-sm">logout</span>
-                      <span className="text-xs">Cerrar</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Información adicional */}
-                <div className="grid grid-cols-2 gap-3 pt-3 border-t border-primary/10">
-                  <div className="text-center">
-                    <p className="text-xs text-slate-400 mb-1">Signo Zodiacal</p>
-                    <p className="text-sm text-primary font-serif">{user.zodiacSign}</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-xs text-slate-400 mb-1">Nivel Místico</p>
-                    <p className="text-sm text-primary font-display">{user.level}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <button
-              onClick={openLoginModal}
-              className="w-full bg-linear-to-r from-primary to-primary/80 
-              hover:from-primary/90 hover:to-primary/70 
-              text-background-dark font-display font-semibold 
-              py-4 rounded-lg tracking-wider uppercase
-              transition-all duration-300 
-              shadow-lg hover:shadow-primary/50
-              flex items-center justify-center gap-3"
-            >
-              <span className="material-icons text-2xl">account_circle</span>
-              <span>Iniciar Sesión</span>
-            </button>
-          )}
-        </div>
 
         {/* Grid de estadísticas */}
         <StatsGrid stats={stats} />

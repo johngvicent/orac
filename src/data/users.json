@@ -8,7 +8,7 @@
       "role": "admin",
       "zodiacSign": "Sagitario",
       "level": "X",
-      "avatar": "https://i.pravatar.cc/150?img=1",
+      "avatar": "https://i.pravatar.cc/150?img=12",
       "stats": {
         "dailyReadings": 247,
         "favoriteCard": "El Mago",
@@ -23,7 +23,7 @@
       "role": "user",
       "zodiacSign": "Piscis",
       "level": "V",
-      "avatar": "https://i.pravatar.cc/150?img=2",
+      "avatar": "https://i.pravatar.cc/150?img=9",
       "stats": {
         "dailyReadings": 124,
         "favoriteCard": "La Luna",

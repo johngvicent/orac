@@ -45,25 +45,27 @@ function Diario() {
       <AppHeader />
 
       <main className="relative z-10 flex-1 flex flex-col overflow-y-auto pb-32 scrollbar-hide">
-        {/* Moon Phase Widget */}
-        <section className="mt-4 px-6 relative">
-          <MoonPhaseWidget 
-            phase={moonData.phase} 
-            illumination={moonData.illumination}
-            loading={moonData.loading}
-          />
-          <WeekCalendar 
-            days={calendarData.days}
-            activeDay={calendarData.activeDay}
-            loading={calendarData.loading}
-          />
-        </section>
+        <div className="w-full max-w-200 mx-auto flex flex-col">
+          {/* Moon Phase Widget */}
+          <section className="mt-4 px-6 relative">
+            <MoonPhaseWidget 
+              phase={moonData.phase} 
+              illumination={moonData.illumination}
+              loading={moonData.loading}
+            />
+            <WeekCalendar 
+              days={calendarData.days}
+              activeDay={calendarData.activeDay}
+              loading={calendarData.loading}
+            />
+          </section>
 
-        {/* Favorite Readings Carousel */}
-        <FavoriteReadingsCarousel />
+          {/* Favorite Readings Carousel */}
+          <FavoriteReadingsCarousel />
 
-        {/* Recent Journal Entries */}
-        <JournalEntryList />
+          {/* Recent Journal Entries */}
+          <JournalEntryList />
+        </div>
       </main>
 
       {/* Floating Action Button */}
