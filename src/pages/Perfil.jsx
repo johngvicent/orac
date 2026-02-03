@@ -65,22 +65,22 @@ function Perfil() {
 
       {/* Main Content */}
       <main className="relative z-10 flex-1 overflow-y-auto px-6 pb-24">
-        {/* Avatar y nombre del usuario */}
-        <UserAvatarSection
-          user={user}
-          onLogin={openLoginModal}
-          onLogout={logout}
-        />
+        <div className="max-w-225 mx-auto">
+          {/* Avatar y nombre del usuario */}
+          <UserAvatarSection
+            user={user}
+            onLogin={openLoginModal}
+            onLogout={logout}
+          />
 
-        {/* Grid de estadísticas */}
-        <StatsGrid stats={stats} />
+          {/* Grid de estadísticas */}
+          <StatsGrid stats={stats} />
 
-        {/* Tarjeta zodiacal */}
-        <ZodiacCard 
-          sign={user ? user.zodiacSign : "Tu Signo del Zodiaco"}
-          house="Sol en la 8ª Casa"
-          icon="nights_stay"
-        />
+          {/* Tarjeta zodiacal */}
+          <ZodiacCard 
+            userSign={user ? user.zodiacSign : null}
+          />
+        </div>
       </main>
 
       {/* Bottom Navigation - Profile activo */}
