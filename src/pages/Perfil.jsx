@@ -77,7 +77,7 @@ function Perfil() {
 
         {/* Tarjeta zodiacal */}
         <ZodiacCard 
-          sign={user ? user.zodiacSign : "Escorpio"}
+          sign={user ? user.zodiacSign : "Tu Signo del Zodiaco"}
           house="Sol en la 8ª Casa"
           icon="nights_stay"
         />
