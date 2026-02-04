@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 // Mapeo de fases lunares a imágenes
 const moonPhaseImages = {
-  'Luna Nueva': '/src/assets/ui/moon-phases/luna-nueva.svg',
-  'Luna Creciente': '/src/assets/ui/moon-phases/luna-creciente.svg',
-  'Cuarto Creciente': '/src/assets/ui/moon-phases/cuarto-creciente.svg',
-  'Gibosa Creciente': '/src/assets/ui/moon-phases/gibosa-creciente.svg',
-  'Luna Llena': '/src/assets/ui/moon-phases/luna-llena.svg',
-  'Gibosa Menguante': '/src/assets/ui/moon-phases/gibosa-menguante.svg',
-  'Cuarto Menguante': '/src/assets/ui/moon-phases/cuarto-menguante.svg',
-  'Luna Menguante': '/src/assets/ui/moon-phases/luna-menguante.svg'
+  'Luna Nueva': '/assets/ui/moon-phases/luna-nueva.svg',
+  'Luna Creciente': '/assets/ui/moon-phases/luna-creciente.svg',
+  'Cuarto Creciente': '/assets/ui/moon-phases/cuarto-creciente.svg',
+  'Gibosa Creciente': '/assets/ui/moon-phases/gibosa-creciente.svg',
+  'Luna Llena': '/assets/ui/moon-phases/luna-llena.svg',
+  'Gibosa Menguante': '/assets/ui/moon-phases/gibosa-menguante.svg',
+  'Cuarto Menguante': '/assets/ui/moon-phases/cuarto-menguante.svg',
+  'Luna Menguante': '/assets/ui/moon-phases/luna-menguante.svg'
 }
 
 const MoonPhaseWidget = ({ phase = 'Waxing Crescent', illumination = 0, loading = false }) => {
