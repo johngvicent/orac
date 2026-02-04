@@ -25,10 +25,17 @@ function Modos() {
 
 	// Handler para selección de lore
 	const handleLoreClick = useCallback((lore) => {
+		if (!lore?.id) return
+		if (lore.id === 'major-arcana') {
+			navigate('/arcanos-mayores')
+			return
+		}
+		if (lore.id === 'minor-arcana') {
+			navigate('/arcanos-menores')
+			return
+		}
 		console.log('Lore clicked:', lore)
-		// Navegar a la página de información del arcano
-		// navigate(`/arcano/${lore.id}`)
-	}, [])
+	}, [navigate])
 
 	// Handler para selección de producto
 	const handleProductSelect = useCallback((product) => {

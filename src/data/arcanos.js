@@ -26,7 +26,7 @@ const arcanosMayores = [
     {
         id: 3,
         nombre: "La Emperatriz",
-        image:"/src/assets/cards/03-the-empress.jpg",
+        image:"/src/assets/cards/03-the empress.jpg",
         nombreIngles: "The Empress",
         descripcion: "Simboliza la fertilidad, la abundancia y la creación. Representa la maternidad, la naturaleza y el poder femenino creativo.",
         significado: "Fertilidad, abundancia, creación, maternidad, naturaleza"
@@ -66,7 +66,7 @@ const arcanosMayores = [
     {
         id: 8,
         nombre: "La Fuerza",
-        image:"/src/assets/cards/08-strength.jpg",
+        image:"/src/assets/cards/08-the-strength.jpg",
         nombreIngles: "Strength",
         descripcion: "Representa la fuerza interior, la compasión y el coraje. Simboliza el dominio de las emociones y la paciencia.",
         significado: "Fuerza interior, compasión, coraje, dominio emocional, paciencia"
@@ -90,7 +90,7 @@ const arcanosMayores = [
     {
         id: 11,
         nombre: "La Justicia",
-        image:"/src/assets/cards/11-justice.jpg",
+        image:"/src/assets/cards/11-the-justice.jpg",
         nombreIngles: "Justice",
         descripcion: "Simboliza la justicia, el equilibrio y la verdad. Representa el karma, las decisiones justas y la responsabilidad.",
         significado: "Justicia, equilibrio, verdad, karma, responsabilidad"

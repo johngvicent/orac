@@ -6,6 +6,8 @@ import Diario from './pages/Diario'
 import Modos from './pages/Modos'
 import Contacto from './pages/Contacto'
 import Perfil from './pages/Perfil'
+import ArcanosMayores from './pages/ArcanosMayores'
+import ArcanosMenores from './pages/ArcanosMenores'
 import LoginModal from './components/ui/LoginModal'
 
 function App() {
@@ -25,6 +27,10 @@ function App() {
         {/* Otras rutas */}
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/perfil" element={<Perfil />} />
+
+        {/* Lore de arcanos */}
+        <Route path="/arcanos-mayores" element={<ArcanosMayores />} />
+        <Route path="/arcanos-menores" element={<ArcanosMenores />} />
         
         {/* Ruta para error 404 */}
         <Route path="*" element={
