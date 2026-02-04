@@ -61,7 +61,7 @@ function ArcanosMayores() {
 									className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-lg transition-all duration-300 hover:bg-white/10 hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
 									aria-label={`Abrir detalles de ${card.nombre}`}
 								>
-									<div className="relative aspect-[3/5] w-full">
+									<div className="relative aspect-3/5 w-full">
 										{card.image ? (
 											<img
 												src={card.image}

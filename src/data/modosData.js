@@ -69,7 +69,7 @@ export const boutiqueProducts = [
   },
   {
     id: 'incense-set',
-    image: null, // Sin imagen, usará el placeholder
+    image: '/src/assets/store/strore-entrance.jpg', // Sin imagen, usará el placeholder
     title: 'Explora Nuestra Boutique',
     subtitle: 'Nuestros productos detallados',
     price: null // Precio no disponible
