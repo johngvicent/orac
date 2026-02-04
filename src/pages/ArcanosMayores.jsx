@@ -8,7 +8,7 @@ import CardModal from '../components/ui/CardModal'
 import TarotCard from '../components/oracle/TarotCard'
 import arcanosMayores from '../data/arcanos'
 
-const CARD_IMAGES = import.meta.glob('/src/assets/cards/*.{jpg,jpeg,png,webp}', {
+const CARD_IMAGES = import.meta.glob('/assets/cards/*.{jpg,jpeg,png,webp}', {
 	eager: true,
 	import: 'default'
 })

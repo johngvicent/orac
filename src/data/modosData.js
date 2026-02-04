@@ -48,28 +48,28 @@ export const loreData = [
 export const boutiqueProducts = [
   {
     id: 'midnight-deck',
-    image: '/src/assets/store/tattoo-tarot-b.jpg',
+    image: '/assets/store/tattoo-tarot-b.jpg',
     title: 'Tattoo Tarot Deck',
     subtitle: 'Estética-Urbana 78 cartas',
     price: 79.99
   },
   {
     id: 'obsidian-crystal',
-    image: '/src/assets/store/alch-tarot-a.jpg', 
+    image: '/assets/store/alch-tarot-a.jpg', 
     title: 'Tarot Alquímico',
     subtitle: 'Ilustraciones Místicas 78 cartas',
     price: 59.99
   },
   {
     id: 'velvet-cloth',
-    image: '/src/assets/store/libro-astrology-a.jpg',
+    image: '/assets/store/libro-astrology-a.jpg',
     title: 'Libro de Astrología',
     subtitle: 'Librería Akelarre 4ta Edición',
     price: 45.5
   },
   {
     id: 'incense-set',
-    image: '/src/assets/store/strore-entrance.jpg', // Sin imagen, usará el placeholder
+    image: '/assets/store/strore-entrance.jpg', // Sin imagen, usará el placeholder
     title: 'Explora Nuestra Boutique',
     subtitle: 'Nuestros productos detallados',
     price: null // Precio no disponible

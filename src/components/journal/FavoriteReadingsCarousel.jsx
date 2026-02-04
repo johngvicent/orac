@@ -9,7 +9,7 @@ const FavoriteReadingsCarousel = ({ readings = [] }) => {
       date: 'Jul 12',
       cardName: 'Los Enamorados',
       interpretation: '"Un cruce en el corazón requiere equilibrio..."',
-      imageUrl: "/src/assets/cards/06-the-lovers.jpg",
+      imageUrl: "/assets/cards/06-the-lovers.jpg",
       isFavorite: true
     },
     {
@@ -17,7 +17,7 @@ const FavoriteReadingsCarousel = ({ readings = [] }) => {
       date: 'Jul 10',
       cardName: 'La Estrella',
       interpretation: '"La esperanza regresa después de un período de sombra..."',
-      imageUrl: "/src/assets/cards/17-the-star.jpg",
+      imageUrl: "/assets/cards/17-the-star.jpg",
       isFavorite: true
     },
     {
@@ -25,7 +25,7 @@ const FavoriteReadingsCarousel = ({ readings = [] }) => {
       date: 'Jul 08',
       cardName: 'La Sacerdotisa',
       interpretation: '"Los secretos se susurran en el silencio..."',
-      imageUrl: "/src/assets/cards/02-the-high-priestess.jpg",
+      imageUrl: "/assets/cards/02-the-high-priestess.jpg",
       isFavorite: true
     }
   ]
