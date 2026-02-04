@@ -1,44 +1,55 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function BottomNavigation() {
   const navItems = [
-    { icon: 'auto_awesome_mosaic', label: 'Inicio', active: true, href: '/' },
-    { icon: 'grid_view', label: 'Cartas', active: false, href: '#' },
-    { icon: 'history', label: 'Historial', active: false, href: '#' },
-    { icon: 'menu_book', label: 'Diario', active: false, href: '#' },
-    { icon: 'person_outline', label: 'Perfil', active: false, href: '#' }
+    { icon: 'auto_awesome_mosaic', label: 'Inicio', to: '/', end: true },
+    { icon: 'grid_view', label: 'Modos', to: '/cartas' },
+    { icon: 'history', label: 'Historial', to: '/historial' },
+    { icon: 'menu_book', label: 'Diario', to: '/diario' },
+    { icon: 'person_outline', label: 'Perfil', to: '/perfil' }
   ]
 
   return (
-    <nav className="relative z-10 pb-8 pt-4 px-4 bg-linear-to-t from-[#05070A] to-transparent">
+    <nav
+      className="fixed bottom-0 left-0 right-0 z-20 px-4 pt-4 pb-[calc(2rem+env(safe-area-inset-bottom))] bg-linear-to-t from-background-dark/95 via-background-dark/80 to-transparent supports-backdrop-filter:backdrop-blur-md"
+      aria-label="Navegación inferior"
+    >
       <div className="flex justify-around items-end max-w-md mx-auto">
         {navItems.map((item, index) => (
-          <a
+          <NavLink
             key={index}
-            href={item.href}
-            className={`flex flex-col items-center gap-1 group transition-opacity ${
-              item.active ? '' : 'opacity-50 hover:opacity-100'
-            }`}
+            to={item.to}
+            end={item.end}
+            className={({ isActive }) =>
+              `flex flex-col items-center gap-1 group transition-opacity ${
+                isActive ? '' : 'opacity-50 hover:opacity-100'
+              }`
+            }
           >
-            <span 
-              className={`material-icons-outlined ${
-                item.active 
-                  ? 'text-[#D4AF37]' 
-                  : 'text-white group-hover:text-[#D4AF37]'
-              }`}
-            >
-              {item.icon}
-            </span>
-            <span 
-              className={`text-[10px] uppercase tracking-tighter font-[Cinzel] ${
-                item.active 
-                  ? 'text-[#D4AF37]' 
-                  : 'text-white group-hover:text-[#D4AF37]'
-              }`}
-            >
-              {item.label}
-            </span>
-          </a>
+            {({ isActive }) => (
+              <>
+                <span
+                  className={`material-icons-outlined ${
+                    isActive
+                      ? 'text-[#D4AF37] drop-shadow-[0_0_6px_rgba(212,175,55,0.45)]'
+                      : 'text-white group-hover:text-[#D4AF37]'
+                  }`}
+                >
+                  {item.icon}
+                </span>
+                <span
+                  className={`text-[10px] uppercase tracking-tighter font-[Cinzel] ${
+                    isActive
+                      ? 'text-[#D4AF37] drop-shadow-[0_0_4px_rgba(212,175,55,0.35)]'
+                      : 'text-white group-hover:text-[#D4AF37]'
+                  }`}
+                >
+                  {item.label}
+                </span>
+              </>
+            )}
+          </NavLink>
         ))}
       </div>
     </nav>

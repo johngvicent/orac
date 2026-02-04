@@ -1,16 +1,50 @@
-# React + Vite
+# EcoSwap & Sort
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una Mini-Guía Interactiva de Reciclaje y Calculadora de Huella de Carbono rápida.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Buscador de Residuos**: Escribe un objeto y descubre el contenedor correcto con consejos de sostenibilidad.
+- **Calculadora de Impacto**: Marca qué has reciclado y calcula el ahorro de energía y agua.
+- **Guía Visual**: Cuadrícula interactiva de contenedores de reciclaje.
+- **Eco-Tips Aleatorios**: Consejos diarios para reducir tu impacto ambiental.
+- **Modo Oscuro "Energy Saver"**: Ahorra energía en pantallas OLED.
 
-## React Compiler
+## Tecnologías Usadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Tailwind CSS v4
+- Framer Motion (animaciones)
+- React Icons
+- Recharts (gráficos)
+- Técnicas modernas: Hooks, Context API, Responsive Design
 
-## Expanding the ESLint configuration
+## Instalación y Uso
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clona el repositorio
+2. `npm install`
+3. `npm run dev` para desarrollo
+4. `npm run build` para producción
+
+## Deployment
+
+Desplegado en [Vercel/Netlify]. Accede desde móviles para la mejor experiencia.
+
+## Estructura del Proyecto
+
+```
+src/
+├── components/
+│   ├── WasteSearch.jsx
+│   ├── ImpactCounter.jsx
+│   ├── VisualGuide.jsx
+│   └── EcoTips.jsx
+├── contexts/
+│   └── ThemeContext.jsx
+├── constants.js
+├── App.jsx
+└── main.jsx
+```
+
+¡Contribuye reciclando y reduciendo tu huella de carbono!

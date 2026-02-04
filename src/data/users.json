@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@orac.com",
+      "password": "1234",
+      "role": "admin",
+      "zodiacSign": "Sagitario",
+      "level": "X",
+      "avatar": "https://i.pravatar.cc/150?img=12",
+      "stats": {
+        "dailyReadings": 247,
+        "favoriteCard": "El Mago",
+        "sharedInsights": 89
+      }
+    },
+    {
+      "id": 2,
+      "username": "mystic_user",
+      "email": "user@orac.com",
+      "password": "user123",
+      "role": "user",
+      "zodiacSign": "Piscis",
+      "level": "V",
+      "avatar": "https://i.pravatar.cc/150?img=9",
+      "stats": {
+        "dailyReadings": 124,
+        "favoriteCard": "La Luna",
+        "sharedInsights": 42
+      }
+    },
+    {
+      "id": 3,
+      "username": "oracle_seeker",
+      "email": "seeker@orac.com",
+      "password": "oracle2026",
+      "role": "user",
+      "zodiacSign": "Acuario",
+      "level": "VII",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "stats": {
+        "dailyReadings": 198,
+        "favoriteCard": "El Ermitaño",
+        "sharedInsights": 67
+      }
+    }
+  ]
+}
