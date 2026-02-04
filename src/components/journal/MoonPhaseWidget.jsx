@@ -1,7 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// Mapeo de fases lunares a imágenes
+const moonPhaseImages = {
+  'Luna Nueva': '/src/assets/ui/moon-phases/luna-nueva.svg',
+  'Luna Creciente': '/src/assets/ui/moon-phases/luna-creciente.svg',
+  'Cuarto Creciente': '/src/assets/ui/moon-phases/cuarto-creciente.svg',
+  'Gibosa Creciente': '/src/assets/ui/moon-phases/gibosa-creciente.svg',
+  'Luna Llena': '/src/assets/ui/moon-phases/luna-llena.svg',
+  'Gibosa Menguante': '/src/assets/ui/moon-phases/gibosa-menguante.svg',
+  'Cuarto Menguante': '/src/assets/ui/moon-phases/cuarto-menguante.svg',
+  'Luna Menguante': '/src/assets/ui/moon-phases/luna-menguante.svg'
+}
+
 const MoonPhaseWidget = ({ phase = 'Waxing Crescent', illumination = 0, loading = false }) => {
+  const moonImage = moonPhaseImages[phase] || moonPhaseImages['Luna Nueva']
   return (
     <div className="flex flex-col items-center">
       <div className="relative w-48 h-48 flex items-center justify-center mb-4">
@@ -33,10 +46,17 @@ const MoonPhaseWidget = ({ phase = 'Waxing Crescent', illumination = 0, loading 
           />
         </svg>
 
-        {/* Luna con efecto místico */}
-        <div className="relative z-10 w-24 h-24 rounded-full bg-slate-900 overflow-hidden shadow-[0_0_40px_5px_rgba(212,175,55,0.2)]">
-          <div className="absolute inset-0 bg-linear-to-r from-transparent via-primary/20 to-primary/40"></div>
-          <div className="absolute inset-0 translate-x-4 bg-slate-950 rounded-full"></div>
+        {/* Luna con imagen de fase lunar */}
+        <div className="relative z-10 w-24 h-24 flex items-center justify-center">
+          {loading ? (
+            <div className="w-24 h-24 rounded-full bg-slate-900 animate-pulse shadow-[0_0_40px_5px_rgba(212,175,55,0.2)]"></div>
+          ) : (
+            <img 
+              src={moonImage} 
+              alt={phase}
+              className="w-24 h-24 object-contain drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+            />
+          )}
         </div>
 
         {/* Texto de fase lunar */}
