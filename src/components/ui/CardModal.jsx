@@ -14,7 +14,7 @@ function CardModal({ children, onClose, isOpen }) {
   // Usamos createPortal para "teletransportar" el modal
   return ReactDOM.createPortal(
     <div
-      className="fixed inset-0 z-9999 flex items-center justify-center p-4 animate-[fadeIn_0.3s_ease-in-out]"
+      className="fixed inset-0 z-9999 flex items-center justify-center py-20 px-4 animate-[fadeIn_0.3s_ease-in-out]"
       style={{
         backgroundColor: 'rgba(5, 7, 10, 0.95)',
         backdropFilter: 'blur(10px)'
@@ -38,7 +38,7 @@ function CardModal({ children, onClose, isOpen }) {
         <div className="absolute inset-0 rounded-2xl bg-[#D4AF37]/20 blur-3xl animate-pulse"></div>
 
         {/* Contenido del modal */}
-        <div className="relative bg-linear-to-b from-[#1B2430] to-[#0A0E14] rounded-2xl border-2 border-[#D4AF37]/30 shadow-2xl overflow-y-auto max-h-200">
+        <div className="relative bg-linear-to-b from-[#1B2430] to-[#0A0E14] rounded-2xl border-2 border-[#D4AF37]/30 shadow-2xl overflow-y-auto max-h-[90vh]">
           {children}
         </div>
       </div>
