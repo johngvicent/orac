@@ -26,7 +26,7 @@ const arcanosMayores = [
     {
         id: 3,
         nombre: "La Emperatriz",
-        image:"/assets/cards/03-the empress.jpg",
+        image:"/assets/cards/03-the-empress.jpg",
         nombreIngles: "The Empress",
         descripcion: "Simboliza la fertilidad, la abundancia y la creación. Representa la maternidad, la naturaleza y el poder femenino creativo.",
         significado: "Fertilidad, abundancia, creación, maternidad, naturaleza"
