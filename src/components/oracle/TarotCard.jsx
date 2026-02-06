@@ -29,7 +29,17 @@ function TarotCard({
   }, [card, description, imageUrl, meaning, title])
 
   return (
-    <div className="p-20">
+    <div className="pt-8 pb-2 px-10 max-w-md mx-auto">
+      {/* Header con indicador de scroll */}
+      <div className="mb-1 text-center animate-bounce">
+        <p className="font-[Cinzel] text-[#D4AF37]/70 text-xs tracking-[0.3em] uppercase mb-2">
+          Desliza hacia abajo
+        </p>
+        <span className="material-icons-outlined text-[#D4AF37]/70 text-xl">
+          expand_more
+        </span>
+      </div>
+
       {/* Imagen de la carta */}
       <div className="relative mb-6 rounded-xl overflow-hidden border border-[#D4AF37]/20">
         <img
