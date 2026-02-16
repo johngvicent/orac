@@ -8,6 +8,7 @@ import Contacto from './pages/Contacto'
 import Perfil from './pages/Perfil'
 import ArcanosMayores from './pages/ArcanosMayores'
 import ArcanosMenores from './pages/ArcanosMenores'
+import Boutique from './pages/Boutique'
 import LoginModal from './components/ui/LoginModal'
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
         {/* Lore de arcanos */}
         <Route path="/arcanos-mayores" element={<ArcanosMayores />} />
         <Route path="/arcanos-menores" element={<ArcanosMenores />} />
+        
+        {/* Boutique */}
+        <Route path="/boutique" element={<Boutique />} />
         
         {/* Ruta para error 404 */}
         <Route path="*" element={

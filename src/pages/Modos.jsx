@@ -39,9 +39,14 @@ function Modos() {
 
 	// Handler para selección de producto
 	const handleProductSelect = useCallback((product) => {
+		// Si es el último producto (Explora Boutique), navegar a página completa
+		if (product.id === 'incense-set' || product.price === null) {
+			navigate('/boutique')
+			return
+		}
 		console.log('Product selected:', product)
 		// Aquí se puede implementar la lógica de compra o detalles del producto
-	}, [])
+	}, [navigate])
 
 	// Handler para contacto
 	const handleContactClick = useCallback(() => {
