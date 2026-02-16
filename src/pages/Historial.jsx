@@ -13,33 +13,33 @@ const Historial = () => {
       id: 1,
       card: 'La Luna',
       date: 'Oct 24, 2023',
-      interpretation: 'Deep intuition and hidden fears surface. Trust your inner voice as you navigate through the uncertainty of the night...',
-      spreadType: 'Daily Draw',
-      imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMi5WEDu2HygCsEkn2q2RDYTIuKN_i06dmSst99eAizoTgm-qLM8pbSGt3TW77AI1uP3UOF6xi75mUv9VTMJU_kJRY6CkIFg05uwEkJcHu8mIDDAE0mwCgVN-KJ8Hf9I7-z8yBnsFZli45B8V4j9hO1zkBOB3PObpSDZu3YW6e60mdgtUY3ewThfJ0B7q2AwuRHXsSEz252BDFBSresCRbkxBcacu7tXTNfIR9HNeLL9JAhUte9k3QgtJ-W8BfS2FuSuQqgkDPC64'
+      interpretation: 'La intuición profunda y los miedos ocultos emergen. Confía en tu voz interior mientras navegas por la incertidumbre de la noche....',
+      spreadType: 'Predicción Diaria',
+      imageUrl: '/assets/cards/18-the-moon.jpg'
     },
     {
       id: 2,
-      card: 'The Star',
+      card: 'La estrella',
       date: 'Oct 22, 2023',
-      interpretation: 'A period of healing and renewed hope. The universe aligns to provide clarity after the storm...',
-      spreadType: 'Celtic Cross',
-      imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAxF1VOzdd3ocoR2utmJxuD08h3jIz0IwiQpEDNUqHpJ1TX1KQ09hWtLmPH2jSNWQ9DaTFSNks9Eh-cKqicDhLXkhzdee0LxTBcAKLI6CgC7edLab0Yhk6Tdj7J0je2uRvlyUNyFBb9CpNGXyjpU95-GOmFCqvYhZM5L5ib0McpY884DwqUcKqoaJezDDl4J9KbcZAuRzn1I_UzjzEfar7sqsqCL_R7T3NL-if0jiOKPIbncSlq0Q_u8Hztsmmqikg-CUwCaXYdD6Q'
+      interpretation: 'Un período de sanación y esperanza renovada. El universo se alinea para proporcionar claridad después de la tormenta...',
+      spreadType: 'Predicción Diaria',
+      imageUrl: '/assets/cards/17-the-star.jpg'
     },
     {
       id: 3,
-      card: 'The Hermit',
+      card: 'El Ermitaño',
       date: 'Oct 21, 2023',
-      interpretation: 'Seek your own light. A time for introspection and inner wisdom rather than external validation...',
-      spreadType: 'Daily Draw',
-      imageUrl: null
+      interpretation: 'Busca tu propia luz. Un momento para la introspección y la sabiduría interior en lugar de la validación externa...',
+      spreadType: 'Predicción Diaria',
+      imageUrl: '/assets/cards/09-the-hermit.jpg'
     },
     {
       id: 4,
-      card: 'Justice',
+      card: 'La Justicia',
       date: 'Oct 19, 2023',
-      interpretation: 'Balance and truth prevail. Your actions are weighed with the consequences they deserve...',
-      spreadType: 'Daily Draw',
-      imageUrl: null
+      interpretation: 'El equilibrio y la verdad prevalecen. Tus acciones se ponderan con las consecuencias que merecen...',
+      spreadType: 'Predicción Diaria',
+      imageUrl: '/assets/cards/11-the-justice.jpg'
     }
   ])
 
@@ -61,30 +61,32 @@ const Historial = () => {
       />
       
       {/* Contenido Principal */}
-      <main className="relative z-10 flex-1 overflow-y-auto px-6 py-4 pb-24 space-y-4">
-        {historyData.length > 0 ? (
-          <>
-            {historyData.map((entry) => (
-              <HistoryCard
-                key={entry.id}
-                card={entry.card}
-                date={entry.date}
-                interpretation={entry.interpretation}
-                spreadType={entry.spreadType}
-                imageUrl={entry.imageUrl}
-              />
-            ))}
-          </>
-        ) : (
-          <div className="flex flex-col items-center justify-center py-16 text-center">
-            <span className="material-icons-outlined text-primary/30 text-6xl mb-4">
-              history
-            </span>
-            <p className="text-slate-400 font-serif italic">
-              No readings yet. Start your journey with a daily draw.
-            </p>
-          </div>
-        )}
+      <main className="relative z-10 flex-1 overflow-y-auto px-6 py-4 pb-24">
+        <div className="max-w-225 mx-auto space-y-4">
+          {historyData.length > 0 ? (
+            <>
+              {historyData.map((entry) => (
+                <HistoryCard
+                  key={entry.id}
+                  card={entry.card}
+                  date={entry.date}
+                  interpretation={entry.interpretation}
+                  spreadType={entry.spreadType}
+                  imageUrl={entry.imageUrl}
+                />
+              ))}
+            </>
+          ) : (
+            <div className="flex flex-col items-center justify-center py-16 text-center">
+              <span className="material-icons-outlined text-primary/30 text-6xl mb-4">
+                history
+              </span>
+              <p className="text-slate-400 font-serif italic">
+                No readings yet. Start your journey with a daily draw.
+              </p>
+            </div>
+          )}
+        </div>
       </main>
       
       {/* Navegación Inferior */}

@@ -61,10 +61,6 @@ function Modos() {
 			<main className="relative z-10 flex-1 overflow-y-auto pb-24">
 				<div className="w-full max-w-200 mx-auto">
 					{/* Carrusel de tiradas */}
-					<SpreadCarousel 
-						spreads={spreadsData} 
-						onSpreadSelect={handleSpreadSelect}
-					/>
 
 					{/* Sección de conocimiento de arcanos */}
 					<LoreSection 

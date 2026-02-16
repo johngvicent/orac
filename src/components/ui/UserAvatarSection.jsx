@@ -73,43 +73,6 @@ function UserAvatarSection({ user = null, onLogin, onLogout, avatarUrl = moonAva
           Accede para guardar tu progreso y estadísticas
         </p>
       )}
-
-      {/* Detalles del usuario (solo logueado) */}
-      {isLoggedIn && (
-        <div className="w-full mt-6">
-          <div className="bg-linear-to-r from-midnight/50 to-stellar/50 border border-primary/20 rounded-lg p-5">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="material-icons text-primary text-2xl">account_circle</span>
-                  </div>
-                  <div>
-                    <p className="text-slate-200 font-serif text-lg">{user?.username}</p>
-                    <p className="text-sm text-slate-400">{user?.email}</p>
-                  </div>
-                </div>
-                {user?.role === 'admin' && (
-                  <span className="px-2 py-1 bg-primary/20 border border-primary/30 rounded text-primary text-xs font-display">
-                    ADMIN
-                  </span>
-                )}
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 pt-3 border-t border-primary/10">
-                <div className="text-center">
-                  <p className="text-xs text-slate-400 mb-1">Signo Zodiacal</p>
-                  <p className="text-sm text-primary font-serif">{user?.zodiacSign}</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-xs text-slate-400 mb-1">Nivel Místico</p>
-                  <p className="text-sm text-primary font-display">{user?.level}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   )
 }

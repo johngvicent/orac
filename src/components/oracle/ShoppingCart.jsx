@@ -92,7 +92,7 @@ function ShoppingCart({ items, onRemoveItem, onCheckout }) {
           {/* Botón de checkout */}
           <button
             onClick={onCheckout}
-            className="w-full py-3 px-6 rounded-lg bg-linear-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] text-midnight font-display font-bold tracking-[0.15em] uppercase text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
+            className="w-full py-3 px-6 rounded-lg bg-linear-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] text-[#0A0E14] font-display font-bold tracking-[0.15em] uppercase text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
           >
             Proceder al Pago
           </button>
