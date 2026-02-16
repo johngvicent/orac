@@ -5,6 +5,12 @@
 
 export const spreadsData = [
   {
+    id: 'oracle',
+    icon: 'rectangle',
+    title: 'El Oráculo',
+    description: 'Una sola carta centrada en una pregunta o intención específica.'
+  },
+  {
     id: 'celtic-cross',
     icon: 'grid_view',
     title: 'Cruz Celta',
@@ -15,12 +21,6 @@ export const spreadsData = [
     icon: 'view_column',
     title: 'Triskel',
     description: 'La clásica tirada de Mente, Cuerpo y Espíritu para claridad diaria.'
-  },
-  {
-    id: 'oracle',
-    icon: 'rectangle',
-    title: 'El Oráculo',
-    description: 'Una sola carta centrada en una pregunta o intención específica.'
   },
   {
     id: 'horseshoe',

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import GoldLeafButton from '../ui/GoldLeafButton'
 
 /**
  * ContactFooter - Footer con información de contacto y redes sociales
@@ -40,12 +41,9 @@ function ContactFooter({ onContactClick }) {
       </div>
       
       {/* Botón de contacto */}
-      <button
-        onClick={onContactClick}
-        className="border border-primary text-primary font-display text-[10px] tracking-[0.2em] uppercase px-8 py-3 rounded-full hover:bg-primary hover:text-midnight transition-all duration-300"
-      >
+      <GoldLeafButton onClick={onContactClick} icon="support_agent">
         Santuario de Contacto
-      </button>
+      </GoldLeafButton>
       
       {/* Copyright */}
       <p className="mt-8 text-[10px] text-slate-600 tracking-widest">
